@@ -40,21 +40,21 @@ class _P3_S3State extends State<P3_S3> {
     /// ----------------
 
 
-    "audios/p3/tua.mp3",
-    "audios/p3/laam.mp3",
-    "audios/p3/meem.mp3",
-    "audios/p3/noon.mp3",
-    "audios/p3/wow.mp3",
-    "audios/p3/hhaa.mp3",
-    "audios/p3/hamza.mp3",
-    "audios/p3/yaa.mp3",
-    "audios/p3/tua.mp3",
-    "audios/p3/laam.mp3",
-    "audios/p3/meem.mp3",
-    "audios/p3/noon.mp3",
-    "audios/p3/wow.mp3",
-    "audios/p3/hhaa.mp3",
-    "audios/p3/hamza.mp3",
+    "audios/p3/tuaBa.mp3",
+    "audios/p3/kafSa.mp3",
+    "audios/p3/kafNun.mp3",
+    "audios/p3/baShin.mp3",
+    "audios/p3/nunShin.mp3",
+    "audios/p3/saSin.mp3",
+    "audios/p3/qafTua.mp3",
+    "audios/p3/gainTa.mp3",
+    "audios/p3/dadZua.mp3",
+    "audios/p3/baRa.mp3",
+    "audios/p3/haRa.mp3",
+    "audios/p3/zuaRa.mp3",
+    "audios/p3/jimDal.mp3",
+    "audios/p3/ainDal.mp3",
+    "audios/p3/kafWao.mp3",
 
 
   ];
