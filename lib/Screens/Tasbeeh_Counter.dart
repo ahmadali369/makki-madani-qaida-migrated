@@ -62,7 +62,7 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
 
-                    SizedBox(height: 80,),
+                    SizedBox(height: 120,),
 
                     PageButton(name: "P1_s1", Page: P1_S1()),
 
@@ -117,7 +117,7 @@ class _PageButtonState extends State<PageButton> {
       child: Container(
         height: 50,
         alignment: Alignment.center,
-        width: MediaQuery.of(context).size.width * .6,
+        width: MediaQuery.of(context).size.width * .75,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [
