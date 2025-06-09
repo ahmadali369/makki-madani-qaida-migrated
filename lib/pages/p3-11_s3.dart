@@ -135,20 +135,20 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[0],
             audio: _audios[0],
-            top: 0.427,
-            left: 0.790,
-            width: .172,
-            heigt: .075,
+            top: 0.340,
+            left: 0.817,
+            width: .145,
+            heigt: .095,
           ),
 
-          /// baa
+          /// LA
           AudioButtonWidget(
             buttonState: _buttonStates[1],
             audio: _audios[1],
-            top: 0.427,
-            left: 0.602,
-            width: .172,
-            heigt: .075,
+            top: 0.340,
+            left: 0.660,
+            width: .145,
+            heigt: .095,
           ),
 
           /// taa
@@ -156,10 +156,10 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[2],
             audio: _audios[2],
-            top: 0.427,
-            left: 0.414,
-            width: .172,
-            heigt: .075,
+            top: 0.340,
+            left: 0.505,
+            width: .145,
+            heigt: .095,
           ),
 
           /// saa
@@ -167,10 +167,10 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[3],
             audio: _audios[3],
-            top: 0.427,
-            left: 0.226,
-            width: .172,
-            heigt: .075,
+            top: 0.340,
+            left: 0.350,
+            width: .145,
+            heigt: .095,
           ),
 
           /// jeem
@@ -178,23 +178,32 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[4],
             audio: _audios[4],
-            top: 0.427,
-            left: 0.038,
-            width: .172,
-            heigt: .075,
+            top: 0.340,
+            left: 0.195,
+            width: .145,
+            heigt: .095,
           ),
 
+
+          AudioButtonWidget(
+            buttonState: _buttonStates[4],
+            audio: _audios[4],
+            top: 0.340,
+            left: 0.040,
+            width: .145,
+            heigt: .095,
+          ),
           /// ------------------------------------------------------------------------------------------ row 2
 
-          /// haa
+          /// J-A
 
           AudioButtonWidget(
             buttonState: _buttonStates[5],
             audio: _audios[5],
-            top: 0.515,
-            left: 0.790,
-            width: .172,
-            heigt: .075,
+            top: 0.440,
+            left: 0.817,
+            width: .145,
+            heigt: .095,
           ),
 
           /// khaa
@@ -202,10 +211,10 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[6],
             audio: _audios[6],
-            top: 0.515,
-            left: 0.602,
-            width: .172,
-            heigt: .075,
+            top: 0.440,
+            left: 0.660,
+            width: .145,
+            heigt: .095,
           ),
 
           /// daal
@@ -213,10 +222,10 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[7],
             audio: _audios[7],
-            top: 0.515,
-            left: 0.414,
-            width: .172,
-            heigt: .075,
+            top: 0.440,
+            left: 0.505,
+            width: .145,
+            heigt: .095,
           ),
 
           /// zaal
@@ -224,10 +233,10 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[8],
             audio: _audios[8],
-            top: 0.515,
-            left: 0.226,
-            width: .172,
-            heigt: .075,
+            top: 0.440,
+            left: 0.350,
+            width: .145,
+            heigt: .095,
           ),
 
           /// raa
@@ -235,10 +244,21 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[9],
             audio: _audios[9],
-            top: 0.515,
-            left: 0.038,
-            width: .172,
-            heigt: .075,
+            top: 0.440,
+            left: 0.195,
+            width: .145,
+            heigt: .095,
+          ),
+
+          /// raa
+
+          AudioButtonWidget(
+            buttonState: _buttonStates[9],
+            audio: _audios[9],
+            top: 0.440,
+            left: 0.040,
+            width: .145,
+            heigt: .095,
           ),
 
           /// ------------------------------------------------------------------------------------------ row 3
@@ -248,20 +268,20 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[10],
             audio: _audios[10],
-            top: 0.603,
-            left: 0.790,
-            width: .172,
-            heigt: .075,
+            top: 0.543,
+            left: 0.817,
+            width: .145,
+            heigt: .095,
           ),
 
           /// seen
           AudioButtonWidget(
             buttonState: _buttonStates[11],
             audio: _audios[11],
-            top: 0.603,
-            left: 0.602,
-            width: .172,
-            heigt: .075,
+            top: 0.543,
+            left: 0.660,
+            width: .145,
+            heigt: .095,
           ),
 
           /// sheen
@@ -269,30 +289,40 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[12],
             audio: _audios[12],
-            top: 0.603,
-            left: 0.414,
-            width: .172,
-            heigt: .075,
+            top: 0.543,
+            left: 0.505,
+            width: .145,
+            heigt: .095,
           ),
 
           /// suad
           AudioButtonWidget(
             buttonState: _buttonStates[13],
             audio: _audios[13],
-            top: 0.603,
-            left: 0.226,
-            width: .172,
-            heigt: .075,
+            top: 0.543,
+            left: 0.350,
+            width: .145,
+            heigt: .095,
           ),
 
           /// duad
           AudioButtonWidget(
             buttonState: _buttonStates[14],
             audio: _audios[14],
-            top: 0.603,
-            left: 0.038,
-            width: .172,
-            heigt: .075,
+            top: 0.543,
+            left: 0.195,
+            width: .145,
+            heigt: .095,
+          ),
+
+          /// duad
+          AudioButtonWidget(
+            buttonState: _buttonStates[14],
+            audio: _audios[14],
+            top: 0.543,
+            left: 0.040,
+            width: .145,
+            heigt: .095,
           ),
 
           ///
@@ -303,10 +333,10 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[15],
             audio: _audios[15],
-            top: 0.691,
-            left: 0.790,
-            width: .172,
-            heigt: .075,
+            top: 0.645,
+            left: 0.817,
+            width: .145,
+            heigt: .095,
           ),
 
           /// zuaa
@@ -314,42 +344,52 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[16],
             audio: _audios[16],
-            top: 0.691,
-            left: 0.602,
-            width: .172,
-            heigt: .075,
+            top: 0.645,
+            left: 0.660,
+            width: .145,
+            heigt: .095,
           ),
 
           /// aain
           AudioButtonWidget(
             buttonState: _buttonStates[17],
             audio: _audios[17],
-            top: 0.691,
-            left: 0.414,
-            width: .172,
-            heigt: .075,
+            top: 0.645,
+            left: 0.505,
+            width: .145,
+            heigt: .095,
           ),
 
           /// gaain
           AudioButtonWidget(
             buttonState: _buttonStates[18],
             audio: _audios[18],
-            top: 0.691,
-            left: 0.226,
-            width: .172,
-            heigt: .075,
+            top: 0.645,
+            left: 0.350,
+            width: .145,
+            heigt: .095,
           ),
 
           /// faa
           AudioButtonWidget(
             buttonState: _buttonStates[19],
             audio: _audios[19],
-            top: 0.691,
-            left: 0.038,
-            width: .172,
-            heigt: .075,
+            top: 0.645,
+            left: 0.195,
+            width: .145,
+            heigt: .095,
           ),
 
+
+          /// faa
+          AudioButtonWidget(
+            buttonState: _buttonStates[19],
+            audio: _audios[19],
+            top: 0.645,
+            left: 0.040,
+            width: .145,
+            heigt: .095,
+          ),
           ///
           ///
           /// ------------------------------------------------------------------------------------------ row 5
@@ -359,40 +399,40 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[20],
             audio: _audios[20],
-            top: 0.779,
-            left: 0.790,
-            width: .172,
-            heigt: .075,
+            top: 0.746,
+            left: 0.817,
+            width: .145,
+            heigt: .095,
           ),
 
           /// kaaf
           AudioButtonWidget(
             buttonState: _buttonStates[21],
             audio: _audios[21],
-            top: 0.779,
-            left: 0.602,
-            width: .172,
-            heigt: .075,
+            top: 0.746,
+            left: 0.660,
+            width: .145,
+            heigt: .095,
           ),
 
           /// laam
           AudioButtonWidget(
             buttonState: _buttonStates[22],
             audio: _audios[22],
-            top: 0.779,
-            left: 0.414,
-            width: .172,
-            heigt: .075,
+            top: 0.746,
+            left: 0.505,
+            width: .145,
+            heigt: .095,
           ),
 
           /// meem
           AudioButtonWidget(
             buttonState: _buttonStates[23],
             audio: _audios[23],
-            top: 0.779,
-            left: 0.226,
-            width: .172,
-            heigt: .075,
+            top: 0.746,
+            left: 0.350,
+            width: .145,
+            heigt: .095,
           ),
 
           /// noon
@@ -400,10 +440,21 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[24],
             audio: _audios[24],
-            top: 0.779,
-            left: 0.038,
-            width: .172,
-            heigt: .075,
+            top: 0.746,
+            left: 0.195,
+            width: .145,
+            heigt: .095,
+          ),
+
+          /// noon
+
+          AudioButtonWidget(
+            buttonState: _buttonStates[24],
+            audio: _audios[24],
+            top: 0.746,
+            left: 0.04,
+            width: .145,
+            heigt: .095,
           ),
 
           ///
@@ -414,30 +465,30 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[25],
             audio: _audios[25],
-            top: 0.867,
-            left: 0.699,
-            width: .172,
-            heigt: .075,
+            top: 0.850,
+            left: 0.817,
+            width: .145,
+            heigt: .095,
           ),
 
           /// haa
           AudioButtonWidget(
             buttonState: _buttonStates[26],
             audio: _audios[26],
-            top: 0.867,
-            left: 0.509,
-            width: .172,
-            heigt: .075,
+            top: 0.850,
+            left: 0.660,
+            width: .145,
+            heigt: .095,
           ),
 
           /// hamza
           AudioButtonWidget(
             buttonState: _buttonStates[27],
             audio: _audios[27],
-            top: 0.867,
-            left: 0.320,
-            width: .172,
-            heigt: .075,
+            top: 0.850,
+            left: 0.505,
+            width: .145,
+            heigt: .095,
           ),
 
           /// yaa
@@ -445,10 +496,33 @@ class _P1_S1State extends State<P3_S3> {
           AudioButtonWidget(
             buttonState: _buttonStates[28],
             audio: _audios[28],
-            top: 0.867,
-            left: 0.130,
-            width: .172,
-            heigt: .075,
+            top: 0.850,
+            left: 0.350,
+            width: .145,
+            heigt: .095,
+          ),
+
+          /// yaa
+
+          AudioButtonWidget(
+            buttonState: _buttonStates[28],
+            audio: _audios[28],
+            top: 0.850,
+            left: 0.195,
+            width: .145,
+            heigt: .095,
+          ),
+
+
+          /// yaa
+
+          AudioButtonWidget(
+            buttonState: _buttonStates[28],
+            audio: _audios[28],
+            top: 0.850,
+            left: 0.04,
+            width: .145,
+            heigt: .095,
           ),
 
           // Add more Positioned containers as needed.
