@@ -79,6 +79,8 @@ flutter:
     - assets/audios/p2/
     - assets/audios/p3/
 
+    - assets/audios/p5/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
