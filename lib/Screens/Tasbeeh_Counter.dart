@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../pages/p1-9_s1.dart';
 import '../pages/p2-10_s2.dart';
 import '../pages/p3-11_s3.dart';
+import '../pages/p4-12_s3.dart';
+import '../pages/p5-13_s3.dart';
 
 void main() {
   runApp(TasbeehApp());
@@ -70,12 +72,25 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
 
                     PageButton(name: "P2_s2", Page: P2_S2()),
 
+                    //
                     SizedBox(height: 10,),
 
                     PageButton(name: "P3_s3", Page: P3_S3()),
 
 
                     ///   ---------------------------
+
+                    // P4_S3
+                    SizedBox(height: 10,),
+
+                    PageButton(name: "P4_S3", Page: P4_S3()),
+
+
+                    SizedBox(height: 10,),
+
+                    PageButton(name: "P5_S3", Page: P5_S3()),
+
+
 
                   ],
                 ),
