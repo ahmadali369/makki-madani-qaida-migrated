@@ -34,8 +34,12 @@ class _SplashScreenState extends State<SplashScreen> {
         width: double.infinity,
         height: double.infinity,
         child: Image.asset(
-          'assets/SplashScreen.png', // Your splash image
-          fit: BoxFit.cover // Ensures the image fills the entire screen
+          // 'assets/SplashScreen.png', // Your splash image
+            'assets/images/img (1).jpg',
+
+          // fit: BoxFit.cover // Ensures the image fills the entire screen
+          fit: BoxFit.fill,
+
         ),
       ),
     );
