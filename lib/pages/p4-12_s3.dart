@@ -91,6 +91,15 @@ class _P4_S3State extends State<P4_S3> {
     super.initState();
     _buttonStates = List<bool>.filled(54, false);
   }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    audioPlayer.dispose();
+    BoolState.setOneButtonRunning(false);
+    BoolState.setOneStreamRunning(false);
+    BoolState.setPlayPause(false);
+    super.dispose();
+  }
 
   void _triggerButton(int index) {
     setState(() {

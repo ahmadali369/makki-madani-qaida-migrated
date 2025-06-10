@@ -67,6 +67,16 @@ class _P3_S3State extends State<P3_S3> {
     _buttonStates = List<bool>.filled(36, false);
   }
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    audioPlayer.dispose();
+    BoolState.setOneButtonRunning(false);
+    BoolState.setOneStreamRunning(false);
+    BoolState.setPlayPause(false);
+    super.dispose();
+  }
+
   void _triggerButton(int index) {
     setState(() {
       _buttonStates[index] = !_buttonStates[index];

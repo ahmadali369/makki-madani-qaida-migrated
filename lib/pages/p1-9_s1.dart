@@ -58,9 +58,11 @@ class _P1_S1State extends State<P1_S1> {
 
   @override
   void dispose() {
-    // Release all sources and dispose the player.
+    // TODO: implement dispose
     audioPlayer.dispose();
-
+    BoolState.setOneButtonRunning(false);
+    BoolState.setOneStreamRunning(false);
+    BoolState.setPlayPause(false);
     super.dispose();
   }
 
@@ -119,6 +121,8 @@ class _P1_S1State extends State<P1_S1> {
 
 
   }
+
+
 
   @override
   Widget build(BuildContext context) {
