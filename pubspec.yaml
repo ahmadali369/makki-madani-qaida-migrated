@@ -80,6 +80,7 @@ flutter:
     - assets/audios/p3/
     - assets/audios/p4/
     - assets/audios/p5/
+    - assets/audios/p6/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
