@@ -22,4 +22,9 @@ class BoolState {
   static void setOneStreamRunning(bool newValue) {
     oneStreamRunning = newValue;
   }
+
+  static void setPlayPause(bool newValue) {
+    playPause = newValue;
+  }
+
 }

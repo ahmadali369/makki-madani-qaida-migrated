@@ -15,44 +15,46 @@ class P5_S3 extends StatefulWidget {
 class _P5_S3State extends State<P5_S3> {
   late List<bool> _buttonStates;
   late List<String> _audios = [
-    "audios/p5/Alif.mp3",
-    "audios/p5/lamAlif.mp3",
-    "audios/p5/baAlif.mp3",
-    "audios/p5/taAlif.mp3",
-    "audios/p5/lamAlif.mp3",
-    "audios/p5/yaAlif.mp3",
-    "audios/p5/jimAlif.mp3",
-    "audios/p5/khaAlif.mp3",
-    "audios/p5/seenAlif.mp3",
-    "audios/p5/dadAlif.mp3",
-    "audios/p5/tuaAlif.mp3",
-    "audios/p5/faaAlif.mp3",
-    "audios/p5/AinAlif.mp3",
-    "audios/p5/miimAlif.mp3",
-    "audios/p5/HhaAlif.mp3",
-    "audios/p5/kafAlif.mp3",
-    "audios/p5/qafAlif.mp3",
-    "audios/p5/lamBa.mp3",
-    "audios/p5/AinLam.mp3",
-    "audios/p5/kafLam.mp3",
-    "audios/p5/qafLam.mp3",
-    "audios/p5/tua.mp3",
-    "audios/p5/laam.mp3",
-    "audios/p5/meem.mp3",
-    "audios/p5/noon.mp3",
-    "audios/p5/wow.mp3",
-    "audios/p5/hhaa.mp3",
-    "audios/p5/hamza.mp3",
-    "audios/p5/yaa.mp3",
-    "audios/p5/tua.mp3",
-    "audios/p5/laam.mp3",
-    "audios/p5/meem.mp3",
-    "audios/p5/noon.mp3",
-    "audios/p5/wow.mp3",
-    "audios/p5/hhaa.mp3",
-    "audios/p5/hamza.mp3",
-    "audios/p5/hhaa.mp3",
-    "audios/p5/hamza.mp3",
+    "audios/p5/ABJ.mp3",
+    "audios/p5/HTuY.mp3",
+    "audios/p5/KLM.mp3",
+    "audios/p5/NSAi.mp3",
+    "audios/p5/SKhZ.mp3",
+    "audios/p5/FDQ.mp3",
+    "audios/p5/RST.mp3",
+    "audios/p5/WZGSh.mp3",
+    "audios/p5/bsm.mp3",
+    "audios/p5/tjd.mp3",
+    "audios/p5/khLQ.mp3",
+    "audios/p5/BLG.mp3",
+    "audios/p5/TBAi.mp3",
+    "audios/p5/NFS.mp3",
+    "audios/p5/QTL.mp3",
+    "audios/p5/ZLL.mp3",
+    "audios/p5/AiLQ.mp3",
+    "audios/p5/FLQ.mp3",
+    "audios/p5/AiSR.mp3",
+    "audios/p5/AiShR.mp3",
+    "audios/p5/YLJ.mp3",
+    "audios/p5/NSR.mp3",
+    "audios/p5/ShkR.mp3",
+    "audios/p5/QSTu.mp3",
+    "audios/p5/JNT.mp3",
+    "audios/p5/GBR.mp3",
+    "audios/p5/THT.mp3",
+    "audios/p5/YJB.mp3",
+    "audios/p5/ShMS.mp3",
+    "audios/p5/SFT.mp3",
+    "audios/p5/MTR.mp3",
+    "audios/p5/KhShY.mp3",
+
+    "audios/p5/3FFAi.mp3",
+
+    "audios/p5/3MAiM.mp3",
+    "audios/p5/2FA.mp3",
+    "audios/p5/3YWY.mp3",
+    "audios/p5/2F-A.mp3",
+    "audios/p5/3WWA.mp3",
   ];
 
   final audioPlayer = AudioPlayer();
@@ -116,6 +118,16 @@ class _P5_S3State extends State<P5_S3> {
 
 
 
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    audioPlayer.dispose();
+    BoolState.setOneButtonRunning(false);
+    BoolState.setOneStreamRunning(false);
+    BoolState.setPlayPause(false);
+    super.dispose();
   }
 
   @override
