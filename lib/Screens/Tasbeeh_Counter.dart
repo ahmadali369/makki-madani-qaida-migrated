@@ -5,7 +5,11 @@ import '../pages/p2-10_s2.dart';
 import '../pages/p3-11_s3.dart';
 import '../pages/p4-12_s3.dart';
 import '../pages/p5-13_s3.dart';
-import '../pages/p6-14_s4.dart';
+import '../pages/p6-14_s4.dart' as p6;
+import '../pages/p7-15_s4.dart' as p7;
+import '../pages/p8-16_s4.dart';
+import '../pages/p9-17_s5.dart';
+import '../pages/p10-18_s5.dart';
 
 void main() {
   runApp(TasbeehApp());
@@ -59,7 +63,7 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
           Center(
             child: Container(
               height: MediaQuery.of(context).size.height,
-              child: const SingleChildScrollView(
+              child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -67,16 +71,16 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
 
                     SizedBox(height: 120,),
 
-                    PageButton(name: "P1_s1", Page: P1_S1()),
+                    PageButton(name: "P1_S1", Page: P1_S1()),
 
                     SizedBox(height: 10,),
 
-                    PageButton(name: "P2_s2", Page: P2_S2()),
+                    PageButton(name: "P2_S2", Page: P2_S2()),
 
                     //
                     SizedBox(height: 10,),
 
-                    PageButton(name: "P3_s3", Page: P3_S3()),
+                    PageButton(name: "P3_S3", Page: P3_S3()),
 
 
                     SizedBox(height: 10,),
@@ -90,8 +94,20 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
 
                     SizedBox(height: 10,),
 
-                    PageButton(name: "P6_S4", Page: P6_S4()),
+                    PageButton(name: "P6_S4", Page: p6.P6_S4()),
 
+                    SizedBox(height: 10,),
+
+                    PageButton(name: "P7_S4", Page: p7.P7_S4()),
+
+                    SizedBox(height: 10,),
+                    PageButton(name: "P8_S4", Page: P8_S4()),
+
+                    SizedBox(height: 10,),
+                    PageButton(name: "P9_S5", Page: P9_S5()),
+
+                    SizedBox(height: 10,),
+                    PageButton(name: "P10_S5", Page: P10_S5()),
                   ],
                 ),
               ),

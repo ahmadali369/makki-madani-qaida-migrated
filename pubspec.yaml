@@ -46,6 +46,7 @@ dependencies:
   flutter_qiblah: ^3.1.0+1
   intl: ^0.17.0
   google_fonts: ^6.2.1
+  geolocator: ^13.0.4
 
 
 dev_dependencies:
@@ -81,6 +82,16 @@ flutter:
     - assets/audios/p4/
     - assets/audios/p5/
     - assets/audios/p6/
+    # - assets/audios/p7/
+    # - assets/audios/p8/
+    # - assets/audios/p9/
+    # - assets/audios/p10/
+    # - assets/audios/p11/
+    # - assets/audios/p12/    
+    # - assets/audios/p13/
+    # - assets/audios/p14/
+    # - assets/audios/p15/
+    - assets/audios/p16/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

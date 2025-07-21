@@ -83,8 +83,8 @@ class _AudioButtonWidgetState extends State<AudioButtonWidget> {
 
             backgroundColor: (widget.buttonState || buttonLocalState)
                 ? const Color(0xbbB3E6E1)
-                : Colors.transparent,
-                //   : Colors.black,
+               // : //Colors.transparent,
+                 : Colors.black,
 
 
 
