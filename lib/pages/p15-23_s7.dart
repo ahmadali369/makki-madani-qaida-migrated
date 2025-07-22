@@ -4,14 +4,14 @@ import 'package:audioplayers/audioplayers.dart';
 import '../AudioButton.dart';
 import '../boolGlobleState.dart';
 
-class P13_S7 extends StatefulWidget {
-  const P13_S7({super.key});
+class P15_S7 extends StatefulWidget {
+  const P15_S7({super.key});
 
   @override
-  State<P13_S7> createState() => _P13_S7State();
+  State<P15_S7> createState() => _P15_S7State();
 }
 
-class _P13_S7State extends State<P13_S7> {
+class _P15_S7State extends State<P15_S7> {
   late List<bool> _buttonStates;
   late final List<String> _audios;
 
@@ -78,32 +78,32 @@ class _P13_S7State extends State<P13_S7> {
   }
 
   double adjustedLeft(int col) {
-    double base = 0.028; // left padding
+    double base = 0.038; // left padding
     double spacing = 0.157; // space between columns
     return base + col * spacing;
   }
 
   double adjustedTop(int row) {
-    double base = 0.35; // top padding adjusted to fit the grid
-    double spacing = 0.077; // space between rows
+    double base = 0.18; // top padding adjusted to fit the grid
+    double spacing = 0.0919; // space between rows
     return base + row * spacing;
   }
  double adjustedLeft1(int col) {
-    double base = 0.028; 
-    double spacing = 0.240; 
+    double base = 0.0288; 
+    double spacing = 0.3230; 
     return base + col * spacing;
   }
 
   double adjustedTop1(int row) {
-    double base = 0.3 + (5 * 0.077); 
-    double spacing = 0.077; 
+    double base = 0.294 + (5 * 0.077); 
+    double spacing = 0.088; 
     return base + row * spacing;
   
   }
   @override
   Widget build(BuildContext context) {
     double buttonWidth = 0.148;
-    double buttonHeight = 0.069;
+    double buttonHeight = 0.084;
 
 
     return Scaffold(
@@ -111,7 +111,7 @@ class _P13_S7State extends State<P13_S7> {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/images/img (22).jpg', 
+              'assets/images/img (24).jpg', 
               fit: BoxFit.fill,
             ),
           ),
@@ -131,18 +131,18 @@ class _P13_S7State extends State<P13_S7> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 6),
-              left: adjustedLeft(i % 6)+0.09,
+              left: adjustedLeft(i % 6)+0.081,
               width: buttonWidth,
               heigt: buttonHeight,
             ),
-          for (int i = 29; i < 41; i++)
+          for (int i = 29; i < 38; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
               audio: _audios[i],
-              top: adjustedTop1((i - 29) ~/ 4), // 4 columns per row
-              left: adjustedLeft1((i - 29) % 4) ,// 4 columns
-              width: buttonWidth*1.5,
-              heigt: buttonHeight+0.005,
+              top: adjustedTop1((i - 29) ~/ 3), // 3 columns per row
+              left: adjustedLeft1((i - 29) % 3) ,// 3 columns
+              width: buttonWidth*2.1,
+              heigt: buttonHeight,
             ),
         ],
       ),

@@ -13,15 +13,20 @@ import '../pages/p10-18_s5.dart';
 import '../pages/p11-19_s6.dart';
 import '../pages/p12-20_s6.dart';
 import '../pages/p13-21_s7.dart';
+import '../pages/p14-22_s7.dart';
+import '../pages/p15-23_s7.dart';
+import '../pages/p16-24_s8.dart';
 
 void main() {
-  runApp(TasbeehApp());
+  runApp(const TasbeehApp());
 }
 
 class TasbeehApp extends StatelessWidget {
+  const TasbeehApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: TasbeehScreen(),
     );
@@ -29,6 +34,8 @@ class TasbeehApp extends StatelessWidget {
 }
 
 class TasbeehScreen extends StatefulWidget {
+  const TasbeehScreen({super.key});
+
   @override
   _TasbeehScreenState createState() => _TasbeehScreenState();
 }
@@ -51,123 +58,101 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          // Background Image
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/background2.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-
-          Center(
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-
-                    SizedBox(height: 120,),
-
-                    PageButton(name: "P1_S1", Page: P1_S1()),
-
-                    SizedBox(height: 10,),
-
-                    PageButton(name: "P2_S2", Page: P2_S2()),
-
-                    //
-                    SizedBox(height: 10,),
-
-                    PageButton(name: "P3_S3", Page: P3_S3()),
-
-
-                    SizedBox(height: 10,),
-
-                    PageButton(name: "P4_S3", Page: P4_S3()),
-
-
-                    SizedBox(height: 10,),
-
-                    PageButton(name: "P5_S3", Page: P5_S3()),
-
-                    SizedBox(height: 10,),
-
-                    PageButton(name: "P6_S4", Page: p6.P6_S4()),
-
-                    SizedBox(height: 10,),
-
-                    PageButton(name: "P7_S4", Page: p7.P7_S4()),
-
-                    SizedBox(height: 10,),
-                    PageButton(name: "P8_S4", Page: P8_S4()),
-
-                    SizedBox(height: 10,),
-                    PageButton(name: "P9_S5", Page: P9_S5()),
-
-                    SizedBox(height: 10,),
-                    PageButton(name: "P10_S5", Page: P10_S5()),
-                    SizedBox(height: 10,),
-                    PageButton(name: "P11_S6", Page: P11_S6()),
-
-                    SizedBox(height: 10,),
-                    PageButton(name: "P12_S6", Page: P12_S6()),
-
-                    SizedBox(height: 10,),
-                    PageButton(name: "P13_S7", Page: const P13_S7()),
-                  ],
+      body: SizedBox.expand(
+        child: Stack(
+          children: [
+            // Background Image
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/background2.png'),
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-          )
 
-
-        ],
+            // Main Content
+            SafeArea(
+              child: SingleChildScrollView(
+                child: Center(
+                  child: Column(
+                    children: const [
+                      SizedBox(height: 40),
+                      PageButton(name: "P1_S1", page: P1_S1()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P2_S2", page: P2_S2()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P3_S3", page: P3_S3()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P4_S3", page: P4_S3()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P5_S3", page: P5_S3()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P6_S4", page: p6.P6_S4()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P7_S4", page: p7.P7_S4()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P8_S4", page: P8_S4()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P9_S5", page: P9_S5()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P10_S5", page: P10_S5()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P11_S6", page: P11_S6()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P12_S6", page: P12_S6()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P13_S7", page: P13_S7()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P14_S7", page: P14_S7()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P15_S7", page: P15_S7()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P16_S8", page: P16_S8()),
+                      SizedBox(height: 10),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-
-
-
-class PageButton extends StatefulWidget {
-
-  const PageButton({super.key, required this.name, required this.Page});
-
+class PageButton extends StatelessWidget {
   final String name;
-  final Widget Page;
+  final Widget page;
 
+  const PageButton({
+    super.key,
+    required this.name,
+    required this.page,
+  });
 
-  @override
-  State<PageButton> createState() => _PageButtonState();
-}
-
-class _PageButtonState extends State<PageButton> {
   @override
   Widget build(BuildContext context) {
-    return                     GestureDetector(
+    return GestureDetector(
       onTap: () {
-
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => widget.Page));
-        // Handle login
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => page),
+        );
       },
       child: Container(
         height: 50,
         alignment: Alignment.center,
-        width: MediaQuery.of(context).size.width * .75,
+        width: MediaQuery.of(context).size.width * 0.75,
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [
-              Color(0xFF13342d), // Dark Green
-              Color(0xFFFFD700), // Gold
-              Color(0xFFFFE066), // Light Gold (Center)
-              Color(0xFFFFD700), // Gold
-              Color(0xFF13342d), // Dark Green
+              Color(0xFF13342d),
+              Color(0xFFFFD700),
+              Color(0xFFFFE066),
+              Color(0xFFFFD700),
+              Color(0xFF13342d),
             ],
             stops: [0.0, 0.35, 0.5, 0.65, 1.0],
             begin: Alignment.centerLeft,
@@ -176,7 +161,7 @@ class _PageButtonState extends State<PageButton> {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Text(
-          widget.name,
+          name,
           style: const TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -187,4 +172,3 @@ class _PageButtonState extends State<PageButton> {
     );
   }
 }
-
