@@ -4,14 +4,14 @@ import 'package:audioplayers/audioplayers.dart';
 import '../AudioButton.dart';
 import '../boolGlobleState.dart';
 
-class P25_S11 extends StatefulWidget {
-  const P25_S11({super.key});
+class P26_S11 extends StatefulWidget {
+  const P26_S11({super.key});
 
   @override
-  State<P25_S11> createState() => _P25_S11State();
+  State<P26_S11> createState() => _P26_S11State();
 }
 
-class _P25_S11State extends State<P25_S11> {
+class _P26_S11State extends State<P26_S11> {
   late List<bool> _buttonStates;
   late final List<String> _audios;
 
@@ -84,14 +84,14 @@ class _P25_S11State extends State<P25_S11> {
   }
 
   double adjustedTop(int row) {
-    double base = 0.334; // top padding adjusted to fit the grid
-    double spacing = 0.087; // space between rows
+    double base = 0.055; // top padding adjusted to fit the grid
+    double spacing = 0.085; // space between rows
     return base + row * spacing;
   }
   @override
   Widget build(BuildContext context) {
     double buttonWidth = 0.168;
-    double buttonHeight = 0.08;
+    double buttonHeight = 0.07;
 
 
     return Scaffold(
@@ -99,13 +99,13 @@ class _P25_S11State extends State<P25_S11> {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/images/img (34).jpg', 
+              'assets/images/img (35).jpg', 
               fit: BoxFit.fill,
             ),
           ),
 
           // Render 35 buttons in 7 rows, 5 columns
-          for (int i = 0; i < 35; i++)
+          for (int i = 0; i < 40; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
               audio: _audios[i],
@@ -114,7 +114,15 @@ class _P25_S11State extends State<P25_S11> {
               width: buttonWidth,
               heigt: buttonHeight,
             ),
-           
+         for (int i = 0; i < 3; i++)
+  AudioButtonWidget(
+    buttonState: _buttonStates[40 + i],
+    audio: _audios[40 + i],
+    top: adjustedTop(8), // new 9th row (0-based index = row 8)
+    left: adjustedLeft(i) - 0.02, // slight left shift for better centering
+    width: buttonWidth * 1.6,
+    heigt: buttonHeight,
+  ),
           
            
         ],
