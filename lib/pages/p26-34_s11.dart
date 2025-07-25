@@ -94,6 +94,7 @@ class _P26_S11State extends State<P26_S11> {
     double buttonHeight = 0.07;
 
 
+
     return Scaffold(
       body: Stack(
         children: [
@@ -114,15 +115,51 @@ class _P26_S11State extends State<P26_S11> {
               width: buttonWidth,
               heigt: buttonHeight,
             ),
-         for (int i = 0; i < 3; i++)
-  AudioButtonWidget(
-    buttonState: _buttonStates[40 + i],
-    audio: _audios[40 + i],
-    top: adjustedTop(8), // new 9th row (0-based index = row 8)
-    left: adjustedLeft(i) - 0.02, // slight left shift for better centering
-    width: buttonWidth * 1.6,
-    heigt: buttonHeight,
-  ),
+             AudioButtonWidget(
+            buttonState: _buttonStates[40],
+            audio: _audios[40],
+            top: adjustedTop(8),
+            left: 0.034,
+            width: .3,
+            heigt: .08,
+          ),
+
+            AudioButtonWidget(
+            buttonState: _buttonStates[41],
+            audio: _audios[41],
+            top: adjustedTop(8),
+            left: 0.35,
+            width: .3,
+            heigt: .08,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[42],
+            audio: _audios[42],
+            top: adjustedTop(8),
+            left: 0.654,
+            width: .3,
+            heigt: .08,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[43],
+            audio: _audios[43],
+            top: adjustedTop(9),
+            left: 0.185,
+            width: .3,
+            heigt: .08,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[44],
+            audio: _audios[44],
+            top: adjustedTop(9),
+            left: 0.495,
+            width: .3,
+            heigt: .08,
+          ),
+
+
+
+
           
            
         ],

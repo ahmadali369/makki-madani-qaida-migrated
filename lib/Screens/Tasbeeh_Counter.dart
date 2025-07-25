@@ -26,6 +26,10 @@ import '../pages/p23-31_s10.dart';
 import '../pages/p24-32_s10.dart';
 import '../pages/p25-33_s11.dart';
 import '../pages/p26-34_s11.dart';
+import '../pages/p27-37_s12.dart';
+import '../pages/p28-38_s12.dart';
+import '../pages/p29-37_s12.dart';
+import '../pages/p30-38_s14.dart';
 
 void main() {
   runApp(const TasbeehApp());
@@ -142,7 +146,15 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
                       SizedBox(height: 10),
                       PageButton(name: "P26_S11", page: P26_S11()),
                       SizedBox(height: 10),
+                      PageButton(name: "P27_S12", page: P27_S11()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P28_S12", page: P28_S11()),
+                      SizedBox(height: 10),
 
+                      PageButton(name: "P29_S12", page: P29_S11()),                             
+                      SizedBox(height: 10),
+                      PageButton(name: "P30_S14", page: P30_S14()),
+                      SizedBox(height: 10),
 
 
 
