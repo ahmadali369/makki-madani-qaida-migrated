@@ -104,7 +104,6 @@ class _P30_S14State extends State<P30_S14> {
             ),
           ),
 
-          // Render 35 buttons in 7 rows, 5 columns
           for (int i = 0; i < 20; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
