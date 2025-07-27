@@ -36,7 +36,19 @@ import '../pages/p33-41_s15.dart';
 import '../pages/p34-42_s16.dart';
 import '../pages/p35-43_s16.dart';
 import '../pages/p36-44_s17.dart';
-import '../pages/p37-45_s17.dart';
+import '../pages/p37-45_s18.dart';
+import '../pages/p38-46_s19.dart';
+import '../pages/p40-48_s20.dart';
+import '../pages/p41-49_s21.dart';
+
+import '../pages/p42-50_s21.dart';
+import '../pages/p43-51_23.dart';
+import '../pages/p45-53_s24.dart';
+import '../pages/p46-54_s25.dart';
+import '../pages/p47-55_s26.dart';
+import '../pages/p48-56_s27.dart';
+
+
 
 
 
@@ -176,7 +188,25 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
                       SizedBox(height: 10),
                       PageButton(name: "P36_S17", page: P36_S17()),
                       SizedBox(height: 10),
-                      PageButton(name: "P37_S17", page: P37_S17()),
+                      PageButton(name: "P37_S18", page: P37_S18()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P38_S19", page: P38_S19()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P40_S20", page: P40_S20()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P41_S21", page: P41_S21()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P42_S21", page: P42_S21()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P43_S23", page: P43_S23()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P45_S24", page: P45_S24()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P46_S25", page: P46_S25()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P47_S26", page: P47_S26()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P48_S27", page: P48_S27()),
                       SizedBox(height: 10),
 
 
