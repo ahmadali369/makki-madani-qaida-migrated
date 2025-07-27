@@ -4,14 +4,14 @@ import 'package:audioplayers/audioplayers.dart';
 import '../AudioButton.dart';
 import '../boolGlobleState.dart';
 
-class P37_S17 extends StatefulWidget {
-  const P37_S17({super.key});
+class P37_S18 extends StatefulWidget {
+  const P37_S18({super.key});
 
   @override
-  State<P37_S17> createState() => _P37_S17State();
+  State<P37_S18> createState() => _P37_S18State();
 }
 
-class _P37_S17State extends State<P37_S17> {
+class _P37_S18State extends State<P37_S18> {
   late List<bool> _buttonStates;
   late final List<String> _audios;
 
