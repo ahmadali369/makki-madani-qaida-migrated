@@ -1,0 +1,225 @@
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
+
+import '../AudioButton.dart';
+import '../boolGlobleState.dart';
+
+class P40_S20 extends StatefulWidget {
+  const P40_S20({super.key});
+
+  @override
+  State<P40_S20> createState() => _P40_S20State();
+}
+
+class _P40_S20State extends State<P40_S20> {
+  late List<bool> _buttonStates;
+  late final List<String> _audios;
+
+  final audioPlayer = AudioPlayer();
+
+  @override
+  void initState() {
+    super.initState();
+    _buttonStates = List<bool>.filled(45, false);
+    _audios = List.generate(
+      45,
+      (index) => 'audios/p11/audio_${index + 1}.mp3',
+    );
+  }
+
+  @override
+  void dispose() {
+    audioPlayer.dispose();
+    BoolState.setOneButtonRunning(false);
+    BoolState.setOneStreamRunning(false);
+    BoolState.setPlayPause(false);
+    super.dispose();
+  }
+
+  void _triggerButton(int index) {
+    setState(() {
+      _buttonStates[index] = !_buttonStates[index];
+    });
+  }
+
+  Future<void> _triggerButtonsSequentially() async {
+    setState(() {
+      BoolState.toggleOneStreamRunning();
+    });
+
+    for (int i = 0; i < _buttonStates.length; i++) {
+      if (BoolState.playPause == true) {
+        _triggerButton(i);
+        if (i > 0) _triggerButton(i - 1);
+
+        try {
+          await audioPlayer.play(AssetSource(_audios[i]));
+          Duration? duration = await audioPlayer.getDuration();
+          if (duration != null) await Future.delayed(duration);
+        } catch (e) {
+          print('Error playing ${_audios[i]}: $e');
+        }
+
+        if (i == _buttonStates.length - 1) {
+          _triggerButton(_buttonStates.length - 1);
+          setState(() {
+            BoolState.togglePlayPause();
+          });
+        }
+      } else {
+        if (i > 0) _triggerButton(i - 1);
+        break;
+      }
+    }
+
+    setState(() {
+      BoolState.toggleOneStreamRunning();
+    });
+  }
+
+ 
+  @override
+  Widget build(BuildContext context) {
+
+
+
+    return Scaffold(
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/img (49).jpg', 
+              fit: BoxFit.fill,
+            ),
+          ),
+
+         
+             //first row
+             AudioButtonWidget(
+            buttonState: _buttonStates[3],
+            audio: _audios[3],
+            top: 0.14,
+            left: .0368,
+            width: .48,
+            heigt: .084,
+          ),
+
+           AudioButtonWidget(
+            buttonState: _buttonStates[3],
+            audio: _audios[3],
+            top: 0.14,
+            left: .53,
+            width: .44,
+            heigt: .084,
+          ),
+          
+         //second row
+          AudioButtonWidget(
+            buttonState: _buttonStates[4],
+            audio: _audios[4],
+            top: 0.23,
+            left: .0368,
+            width: .48,
+            heigt: .084,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[4],
+            audio: _audios[4],
+            top: 0.23,
+           left: .53,
+            width: .44,
+            heigt: .084,
+          ),
+          
+          //third row
+          AudioButtonWidget(
+            buttonState: _buttonStates[5],
+            audio: _audios[5],
+            top: 0.327,
+            left: .0368,
+            width: .48,
+            heigt: .084,
+          ),  
+          AudioButtonWidget(
+            buttonState: _buttonStates[5],
+            audio: _audios[5],
+            top: 0.327,
+           left: .53,
+            width: .48,
+            heigt: .084,
+          ),
+
+          //fourth row
+          AudioButtonWidget(  
+            buttonState: _buttonStates[6],
+            audio: _audios[6],
+            top: 0.42,
+            left: .0368,
+            width: .48,
+            heigt: .084,
+          ),      
+          AudioButtonWidget(
+            buttonState: _buttonStates[6],
+            audio: _audios[6],
+            top: 0.42,
+           left: .53,
+            width: .48,
+            heigt: .084,
+          ),
+        
+          AudioButtonWidget(  
+            buttonState: _buttonStates[6],
+            audio: _audios[6],
+            top: 0.63,
+            left: .1,
+            width: .29,
+            heigt: .084,
+          ),      
+          AudioButtonWidget(
+            buttonState: _buttonStates[6],
+            audio: _audios[6],
+            top: 0.63,
+           left: .56,
+            width: .29,
+            heigt: .084,
+          ),
+           AudioButtonWidget(  
+            buttonState: _buttonStates[6],
+            audio: _audios[6],
+            top: 0.755,
+            left: .1,
+            width: .29,
+            heigt: .084,
+          ),      
+          AudioButtonWidget(
+            buttonState: _buttonStates[6],
+            audio: _audios[6],
+            top: 0.755,
+           left: .56,
+            width: .29,
+            heigt: .084,
+          ),
+            
+           
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          if (!BoolState.oneButtonRunning && !BoolState.oneStreamRunning) {
+            setState(() {
+              BoolState.togglePlayPause();
+            });
+            _triggerButtonsSequentially();
+          } else {
+            setState(() {
+              BoolState.togglePlayPause();
+            });
+          }
+        },
+        child: Icon(
+          BoolState.playPause ? Icons.pause : Icons.play_arrow,
+        ),
+      ),
+    );
+  }
+}
