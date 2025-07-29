@@ -22,8 +22,14 @@ class _P11_S6State extends State<P11_S6> {
     super.initState();
     _buttonStates = List<bool>.filled(30, false);
     _audios = List.generate(
-      30,
-      (index) => 'audios/p10/audio_${index + 1}.mp3',
+      18,
+      (index) => 'audios/p19-1/${index + 1}.mp3',
+    );
+    _audios.addAll(
+      List.generate(
+        12,
+        (index) => 'audios/p19-2/${index + 1}.mp3',
+      ),
     );
   }
 
@@ -78,6 +84,7 @@ class _P11_S6State extends State<P11_S6> {
   }
 
   double adjustedLeft(int col) {
+    col=5-col; // Adjusting column index to match the layout
     double base = 0.03; // left padding
     double spacing = 0.157; // space between columns
     return base + col * spacing;

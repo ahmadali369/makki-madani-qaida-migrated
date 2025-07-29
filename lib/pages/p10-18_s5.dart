@@ -22,8 +22,14 @@ class _P10_S5State extends State<P10_S5> {
     super.initState();
     _buttonStates = List<bool>.filled(48, false);
     _audios = List.generate(
-      48,
+      30,
       (index) => 'audios/p18-1/${index + 1}.mp3',
+    );
+    _audios.addAll(
+      List.generate(
+        18,
+        (index) => 'audios/p18-2/${index + 1}.mp3',
+      ),
     );
   }
 
