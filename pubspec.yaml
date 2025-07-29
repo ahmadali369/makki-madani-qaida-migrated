@@ -90,8 +90,12 @@ flutter:
     # - assets/audios/p12/    
     # - assets/audios/p13/
     # - assets/audios/p14/
-    # - assets/audios/p15/
+    - assets/audios/p15-1/
+    - assets/audios/p15-2/
     - assets/audios/p16/
+    - assets/audios/p17/
+    - assets/audios/p18-1/
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

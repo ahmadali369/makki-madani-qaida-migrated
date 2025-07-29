@@ -23,27 +23,16 @@ class _P7_S4State extends State<P7_S4> {
     super.initState();
     _buttonStates = List<bool>.filled(58, false);
 
-    _audios = [
-      // 29 Zabar
-      'audios/p6/zar_a.mp3', 'audios/p6/zar_b.mp3', 'audios/p6/zar_t.mp3', 'audios/p6/zar_s.mp3',
-      'audios/p6/zar_ja.mp3', 'audios/p6/zar_ha.mp3', 'audios/p6/zar_kh.mp3', 'audios/p6/zar_dal.mp3',
-      'audios/p6/zar_zal.mp3', 'audios/p6/zar_ra.mp3', 'audios/p6/zar_za.mp3', 'audios/p6/zar_sin.mp3',
-      'audios/p6/zar_shin.mp3', 'audios/p6/zar_sad.mp3', 'audios/p6/zar_dad.mp3', 'audios/p6/zar_tt.mp3',
-      'audios/p6/zar_zz.mp3', 'audios/p6/zar_ain.mp3', 'audios/p6/zar_ghain.mp3', 'audios/p6/zar_fa.mp3',
-      'audios/p6/zar_qaf.mp3', 'audios/p6/zar_kaf.mp3', 'audios/p6/zar_lam.mp3', 'audios/p6/zar_meem.mp3',
-      'audios/p6/zar_noon.mp3', 'audios/p6/zar_wao.mp3', 'audios/p6/zar_haa.mp3', 'audios/p6/zar_hamza.mp3',
-      'audios/p6/zar_ya.mp3',
-
-      // 29 Pesh
-      'audios/p6/pesh_a.mp3', 'audios/p6/pesh_b.mp3', 'audios/p6/pesh_t.mp3', 'audios/p6/pesh_s.mp3',
-      'audios/p6/pesh_ja.mp3', 'audios/p6/pesh_ha.mp3', 'audios/p6/pesh_kh.mp3', 'audios/p6/pesh_dal.mp3',
-      'audios/p6/pesh_zal.mp3', 'audios/p6/pesh_ra.mp3', 'audios/p6/pesh_za.mp3', 'audios/p6/pesh_sin.mp3',
-      'audios/p6/pesh_shin.mp3', 'audios/p6/pesh_sad.mp3', 'audios/p6/pesh_dad.mp3', 'audios/p6/pesh_tt.mp3',
-      'audios/p6/pesh_zz.mp3', 'audios/p6/pesh_ain.mp3', 'audios/p6/pesh_ghain.mp3', 'audios/p6/pesh_fa.mp3',
-      'audios/p6/pesh_qaf.mp3', 'audios/p6/pesh_kaf.mp3', 'audios/p6/pesh_lam.mp3', 'audios/p6/pesh_meem.mp3',
-      'audios/p6/pesh_noon.mp3', 'audios/p6/pesh_wao.mp3', 'audios/p6/pesh_haa.mp3', 'audios/p6/pesh_hamza.mp3',
-      'audios/p6/pesh_ya.mp3',
-    ];
+    _audios = List.generate(
+      29,
+      (index) => 'audios/p15-1/${index + 1}.mp3',
+    );
+    _audios.addAll(
+      List.generate(
+        29,
+        (index) => 'audios/p15-2/${index + 1}.mp3',
+      ),
+    );
   }
 
   @override

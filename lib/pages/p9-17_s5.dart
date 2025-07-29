@@ -20,10 +20,10 @@ class _P9_S5State extends State<P9_S5> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(72, false);
+    _buttonStates = List<bool>.filled(60, false);
     _audios = List.generate(
-      72,
-      (index) => 'audios/p9/audio_${index + 1}.mp3',
+      60,
+      (index) => 'audios/p17/${index + 1}.mp3',
     );
   }
 
@@ -78,6 +78,7 @@ class _P9_S5State extends State<P9_S5> {
   }
 
   double adjustedLeft(int col) {
+    col = 5 - col; // Reverse the order of columns
     double base = 0.035;
     double spacing = 0.148;
     double gap = 0.04; // extra space between col 2 and 3

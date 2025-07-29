@@ -20,10 +20,10 @@ class _P8_S4State extends State<P8_S4> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(78, false);
+    _buttonStates = List<bool>.filled(84, false);
 
     _audios = List.generate(
-      78,
+      84,
       (index) => 'audios/p16/${index + 1}.mp3',
     );
   }
@@ -75,6 +75,7 @@ class _P8_S4State extends State<P8_S4> {
   }
 
   double adjustedLeft(int col) {
+      col = 5 - col;
     double base = 0.035;
     double spacing = 0.148;
     double gap = 0.04; // extra space between col 2 and 3
