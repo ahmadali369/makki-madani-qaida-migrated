@@ -22,8 +22,14 @@ class _P14_S7State extends State<P14_S7> {
     super.initState();
     _buttonStates = List<bool>.filled(42, false);
     _audios = List.generate(
-      42,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      29,
+      (index) => 'audios/p22-1/${index + 1}.mp3',
+    );
+    _audios.addAll(
+      List.generate(
+        13,
+        (index) => 'audios/p22-2/${index + 1}.mp3',
+      ),
     );
   }
 
@@ -78,6 +84,7 @@ class _P14_S7State extends State<P14_S7> {
   }
 
   double adjustedLeft(int col) {
+    col = 5 - col; // Adjusting column index to match the layout
     double base = 0.038; // left padding
     double spacing = 0.157; // space between columns
     return base + col * spacing;
@@ -89,6 +96,7 @@ class _P14_S7State extends State<P14_S7> {
     return base + row * spacing;
   }
  double adjustedLeft1(int col) {
+    col = 3 - col; // Reverse the order of columns for the second grid
     double base = 0.028; 
     double spacing = 0.240; 
     return base + col * spacing;
