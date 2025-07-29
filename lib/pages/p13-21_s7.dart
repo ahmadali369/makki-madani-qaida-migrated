@@ -84,7 +84,6 @@ class _P13_S7State extends State<P13_S7> {
   }
 
   double adjustedLeft(int col) {
-    col = 5 - col; // Reverse the order of columns
     double base = 0.028; // left padding
     double spacing = 0.157; // space between columns
     return base + col * spacing;
@@ -96,14 +95,13 @@ class _P13_S7State extends State<P13_S7> {
     return base + row * spacing;
   }
  double adjustedLeft1(int col) {
-    col = 3 - col; // Reverse the order of columns for the second grid
-    double base = 0.028; 
+    double base = 0.029; 
     double spacing = 0.240; 
     return base + col * spacing;
   }
 
   double adjustedTop1(int row) {
-    double base = 0.3 + (5 * 0.077); 
+    double base = 0.73; 
     double spacing = 0.077; 
     return base + row * spacing;
   
@@ -130,7 +128,7 @@ class _P13_S7State extends State<P13_S7> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 6)+ 0.001,
-              left: adjustedLeft(i % 6),
+              left: adjustedLeft(5-(i % 6)),
               width: buttonWidth,
               heigt: buttonHeight,
             ),
@@ -139,7 +137,7 @@ class _P13_S7State extends State<P13_S7> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 6),
-              left: adjustedLeft(i % 6)+0.09,
+              left: adjustedLeft(5-(i % 6))-0.07,
               width: buttonWidth,
               heigt: buttonHeight,
             ),
@@ -148,7 +146,7 @@ class _P13_S7State extends State<P13_S7> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop1((i - 29) ~/ 4), // 4 columns per row
-              left: adjustedLeft1((i - 29) % 4) ,// 4 columns
+              left: adjustedLeft1(3-((i - 29) % 4)) ,// 4 columns
               width: buttonWidth*1.5,
               heigt: buttonHeight+0.005,
             ),

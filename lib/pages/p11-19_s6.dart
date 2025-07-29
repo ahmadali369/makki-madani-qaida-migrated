@@ -84,7 +84,7 @@ class _P11_S6State extends State<P11_S6> {
   }
 
   double adjustedLeft(int col) {
-    col=5-col; // Adjusting column index to match the layout
+     // Adjusting column index to match the layout
     double base = 0.03; // left padding
     double spacing = 0.157; // space between columns
     return base + col * spacing;
@@ -98,7 +98,7 @@ class _P11_S6State extends State<P11_S6> {
 
   @override
   Widget build(BuildContext context) {
-    double buttonWidth = 0.146;
+    double buttonWidth = 0.149;
     double buttonHeight = 0.085;
 
     return Scaffold(
@@ -117,7 +117,7 @@ class _P11_S6State extends State<P11_S6> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 6),
-              left: adjustedLeft(i % 6),
+              left: adjustedLeft(5-(i % 6)),
               width: buttonWidth,
               heigt: buttonHeight,
             ),
@@ -126,7 +126,7 @@ class _P11_S6State extends State<P11_S6> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
              top: adjustedTop(3+(i-18)~/ 3)+0.036, 
-            left: adjustedLeft( (i - 18) % 3*2),
+            left: adjustedLeft( 4-((i - 18) % 3*2)),
               width: buttonWidth*2,
               heigt: buttonHeight,
             ),

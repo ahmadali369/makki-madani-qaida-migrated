@@ -139,7 +139,7 @@ class _P14_S7State extends State<P14_S7> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 6),
-              left: adjustedLeft(i % 6)+0.081,
+              left: adjustedLeft((i % 6))-0.081,
               width: buttonWidth,
               heigt: buttonHeight,
             ),

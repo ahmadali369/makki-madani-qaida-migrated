@@ -23,7 +23,13 @@ class _P15_S7State extends State<P15_S7> {
     _buttonStates = List<bool>.filled(42, false);
     _audios = List.generate(
       29,
-      (index) => 'audios/p23-1/audio_${index + 1}.mp3',
+      (index) => 'audios/p23-1/${index + 1}.mp3',
+    );
+    _audios.addAll(
+      List.generate(
+        13,
+        (index) => 'audios/p23-2/${index + 1}.mp3',
+      ),
     );
 
 
@@ -92,8 +98,8 @@ class _P15_S7State extends State<P15_S7> {
     return base + row * spacing;
   }
  double adjustedLeft1(int col) {
-    col = 3 - col; // Reverse the order of columns for the second grid
-    double base = 0.0288; 
+    col = 2 - col; // Reverse the order of columns for the second grid
+    double base = 0.029; 
     double spacing = 0.3230; 
     return base + col * spacing;
   }
@@ -135,7 +141,7 @@ class _P15_S7State extends State<P15_S7> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 6),
-              left: adjustedLeft(i % 6)+0.081,
+              left: adjustedLeft(i % 6)-0.081,
               width: buttonWidth,
               heigt: buttonHeight,
             ),
@@ -145,7 +151,7 @@ class _P15_S7State extends State<P15_S7> {
               audio: _audios[i],
               top: adjustedTop1((i - 29) ~/ 3), // 3 columns per row
               left: adjustedLeft1((i - 29) % 3) ,// 3 columns
-              width: buttonWidth*2.1,
+              width: buttonWidth*2.03,
               heigt: buttonHeight,
             ),
         ],
