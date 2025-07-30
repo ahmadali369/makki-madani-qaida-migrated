@@ -14,82 +14,14 @@ class P19_S9 extends StatefulWidget {
 
 class _P19_S9State extends State<P19_S9> {
   late List<bool> _buttonStates;
-  late List<String> _audios = [
-    "audios/p4/shinQaf.mp3",
-    "audios/p4/lamKaf.mp3",
-    "audios/p4/faQaf.mp3",
-    "audios/p4/qafKaf.mp3",
-    "audios/p4/faSad.mp3",
-    "audios/p4/nunSad.mp3",
-    "audios/p4/baYa.mp3",
-    "audios/p4/nunYa.mp3",
-    "audios/p4/taYa.mp3",
-    "audios/p4/yaYa.mp3",
-    "audios/p4/hamzaWao.mp3",
-    "audios/p4/yaHamza.mp3",
-    "audios/p4/HhaWao.mp3",
-    "audios/p4/mimWao.mp3",
-    "audios/p4/taHha.mp3",
-    "audios/p4/nunTa.mp3",
-    "audios/p4/Hha.mp3",
-    "audios/p4/taHha.mp3",
-
-    "audios/p4/baMim.mp3",
-    "audios/p4/baJim.mp3",
-    "audios/p4/taHa.mp3",
-
-
-
-
-    "audios/p4/saJim.mp3",
-    "audios/p4/haJim.mp3",
-    "audios/p4/lamHa.mp3",
-    "audios/p4/ainJim.mp3",
-    "audios/p4/nunKha.mp3",
-    "audios/p4/yaHa.mp3",
-    "audios/p4/SMN.mp3",
-
-    "audios/p4/YHhB.mp3",
-
-    "audios/p4/BHhM.mp3",
-    "audios/p4/AiBD.mp3",
-    "audios/p4/BAiD.mp3",
-    "audios/p4/BLB.mp3",
-    "audios/p4/HSN.mp3",
-    "audios/p4/QSL.mp3",
-    "audios/p4/BKhT.mp3",
-
-    "audios/p4/HMD.mp3",
-    "audios/p4/KhTF.mp3",
-    "audios/p4/SKhTu.mp3",
-    "audios/p4/BLB.mp3",
-    "audios/p4/HhLK.mp3",
-    "audios/p4/BKT.mp3",
-    "audios/p4/TGZ.mp3",
-    "audios/p4/BHhM.mp3",
-    "audios/p4/FHmT.mp3",
-    "audios/p4/BHhA.mp3",
-
-
-    "audios/p4/YTN.mp3",
-    "audios/p4/STN.mp3",
-    "audios/p4/NBN.mp3",
-    "audios/p4/BYL.mp3",
-    "audios/p4/TNL.mp3",
-    "audios/p4/NBL.mp3",
-
-    "audios/p4/STL.mp3",
-    "audios/p4/YTL.mp3",
-
-
-  ];
-
+  late List<String> _audios;
   final audioPlayer = AudioPlayer();
 
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(54, false);
+    _buttonStates = List<bool>.filled(48, false);
+    _audios = List.generate(48, (index) => 'assets/audios/p27/${index + 1}.mp3');
   }
   @override
   void dispose() {
