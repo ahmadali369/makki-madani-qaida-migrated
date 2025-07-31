@@ -21,7 +21,7 @@ class _P18_S9State extends State<P18_S9> {
   void initState() {
     super.initState();
     _buttonStates = List<bool>.filled(36, false);
-    _audios=List.generate(36, (index) => 'assets/audios/p26/${index + 1}.mp3');
+    _audios=List.generate(36, (index) => 'audios/p26/${index + 1}.mp3');
 
   }
 
