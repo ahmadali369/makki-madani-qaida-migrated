@@ -21,7 +21,7 @@ class _P19_S9State extends State<P19_S9> {
   void initState() {
     super.initState();
     _buttonStates = List<bool>.filled(48, false);
-    _audios = List.generate(48, (index) => 'audios/p27/${index + 1}.mp3');
+    _audios = List.generate(45, (index) => 'audios/p27/${index + 1}.mp3');
   }
   @override
   void dispose() {
@@ -376,7 +376,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[24],
-            audio: _audios[24],
+            audio: 'audios/p27/22.mp3',
             top: 0.507,
             left: 0.817,
             width: .145,
@@ -386,7 +386,7 @@ class _P19_S9State extends State<P19_S9> {
           /// kaaf
           AudioButtonWidget(
             buttonState: _buttonStates[25],
-            audio: _audios[25],
+            audio: 'audios/p27/23.mp3',
             top: 0.507,
             left: 0.660,
             width: .145,
@@ -396,7 +396,7 @@ class _P19_S9State extends State<P19_S9> {
           /// laam
           AudioButtonWidget(
             buttonState: _buttonStates[26],
-            audio: _audios[26],
+            audio: 'audios/p27/24.mp3',
             top: 0.507,
             left: 0.505,
             width: .145,
@@ -406,7 +406,7 @@ class _P19_S9State extends State<P19_S9> {
           /// meem
           AudioButtonWidget(
             buttonState: _buttonStates[27],
-            audio: _audios[27],
+            audio: _audios[24],
             top: 0.507,
             left: 0.350,
             width: .145,
@@ -417,7 +417,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[28],
-            audio: _audios[28],
+            audio: _audios[25],
             top: 0.507,
             left: 0.195,
             width: .145,
@@ -428,7 +428,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[29],
-            audio: _audios[29],
+            audio: _audios[26],
             top: 0.505,
             left: 0.04,
             width: .145,
@@ -442,7 +442,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[30],
-            audio: _audios[30],
+            audio: _audios[27],
             top: 0.625,
             left: 0.817,
             width: .145,
@@ -452,7 +452,7 @@ class _P19_S9State extends State<P19_S9> {
           /// haa
           AudioButtonWidget(
             buttonState: _buttonStates[31],
-            audio: _audios[31],
+            audio: _audios[28],
             top: 0.625,
             left: 0.660,
             width: .145,
@@ -462,7 +462,7 @@ class _P19_S9State extends State<P19_S9> {
           /// hamza
           AudioButtonWidget(
             buttonState: _buttonStates[32],
-            audio: _audios[32],
+            audio: _audios[29],
             top: 0.625,
             left: 0.505,
             width: .145,
@@ -473,7 +473,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[33],
-            audio: _audios[33],
+            audio: _audios[30],
             top: 0.625,
             left: 0.350,
             width: .145,
@@ -484,7 +484,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[34],
-            audio: _audios[34],
+            audio: _audios[31],
             top: 0.625,
             left: 0.195,
             width: .145,
@@ -496,7 +496,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[35],
-            audio: _audios[35],
+            audio: _audios[32],
             top: 0.625,
             left: 0.04,
             width: .145,
@@ -511,7 +511,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[36],
-            audio: _audios[36],
+            audio: _audios[33],
             top: 0.735,
             left: 0.817,
             width: .145,
@@ -521,7 +521,7 @@ class _P19_S9State extends State<P19_S9> {
           /// haa
           AudioButtonWidget(
             buttonState: _buttonStates[37],
-            audio: _audios[37],
+            audio: _audios[34],
             top: 0.735,
             left: 0.660,
             width: .145,
@@ -531,7 +531,7 @@ class _P19_S9State extends State<P19_S9> {
           /// hamza
           AudioButtonWidget(
             buttonState: _buttonStates[38],
-            audio: _audios[38],
+            audio: _audios[35],
             top: 0.735,
             left: 0.505,
             width: .145,
@@ -542,7 +542,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[39],
-            audio: _audios[39],
+            audio: _audios[36],
             top: 0.735,
             left: 0.350,
             width: .145,
@@ -553,7 +553,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[40],
-            audio: _audios[40],
+            audio: _audios[37],
             top: 0.735,
             left: 0.195,
             width: .145,
@@ -565,7 +565,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[41],
-            audio: _audios[41],
+            audio: _audios[38],
             top: 0.735,
             left: 0.04,
             width: .145,
@@ -581,7 +581,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[42],
-            audio: _audios[42],
+            audio: _audios[39],
             top: 0.845,
             left: 0.817,
             width: .145,
@@ -591,7 +591,7 @@ class _P19_S9State extends State<P19_S9> {
           /// haa
           AudioButtonWidget(
             buttonState: _buttonStates[43],
-            audio: _audios[43],
+            audio: _audios[40],
             top: 0.845,
             left: 0.660,
             width: .145,
@@ -601,7 +601,7 @@ class _P19_S9State extends State<P19_S9> {
           /// hamza
           AudioButtonWidget(
             buttonState: _buttonStates[44],
-            audio: _audios[44],
+            audio: _audios[41],
             top: 0.845,
             left: 0.505,
             width: .145,
@@ -612,7 +612,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[45],
-            audio: _audios[45],
+            audio: _audios[42],
             top: 0.845,
             left: 0.350,
             width: .145,
@@ -623,7 +623,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[46],
-            audio: _audios[46],
+            audio: _audios[43],
             top: 0.845,
             left: 0.195,
             width: .145,
@@ -635,7 +635,7 @@ class _P19_S9State extends State<P19_S9> {
 
           AudioButtonWidget(
             buttonState: _buttonStates[47],
-            audio: _audios[47],
+            audio: _audios[44],
             top: 0.845,
             left: 0.04,
             width: .145,
