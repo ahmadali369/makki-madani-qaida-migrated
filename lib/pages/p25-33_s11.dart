@@ -20,10 +20,10 @@ class _P25_S11State extends State<P25_S11> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(45, false);
+    _buttonStates = List<bool>.filled(35, false);
     _audios = List.generate(
-      45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      35,
+      (index) => 'audios/p33/${index + 1}.mp3',
     );
   }
 
