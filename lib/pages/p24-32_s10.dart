@@ -23,7 +23,7 @@ class _P24_S10State extends State<P24_S10> {
     _buttonStates = List<bool>.filled(44, false);
     _audios = List.generate(
       44,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      (index) => 'audios/p32/${index + 1}.mp3',
     );
   }
 
@@ -104,7 +104,6 @@ class _P24_S10State extends State<P24_S10> {
             ),
           ),
 
-          // Render 24 buttons in 4 rows, 6 columns
           for (int i = 0; i < 42; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
