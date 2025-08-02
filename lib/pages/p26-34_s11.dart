@@ -23,7 +23,7 @@ class _P26_S11State extends State<P26_S11> {
     _buttonStates = List<bool>.filled(45, false);
     _audios = List.generate(
       45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      (index) => 'audios/p34/${index + 1}.mp3',
     );
   }
 
@@ -105,7 +105,6 @@ class _P26_S11State extends State<P26_S11> {
             ),
           ),
 
-          // Render 35 buttons in 7 rows, 5 columns
           for (int i = 0; i < 40; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
