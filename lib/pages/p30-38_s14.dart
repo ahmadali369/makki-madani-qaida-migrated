@@ -22,13 +22,10 @@ class _P30_S14State extends State<P30_S14> {
     super.initState();
     _buttonStates = List<bool>.filled(28, false);
     _audios = List.generate(
-      8,
-      (index) => 'audios/p38-1/${index + 1}.mp3',
+      28,
+      (index) => 'audios/p38/${index + 1}.mp3',
     );
-    _audios.addAll(List.generate(
-      20,
-      (index) => 'audios/p38-2/${index + 1}.mp3',
-    ));
+    
   }
 
   @override
