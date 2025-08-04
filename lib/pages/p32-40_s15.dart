@@ -20,10 +20,10 @@ class _P32_S15State extends State<P32_S15> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(45, false);
+    _buttonStates = List<bool>.filled(20, false);
     _audios = List.generate(
-      45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      20,
+      (index) => 'audios/p40/${index + 1}.mp3',
     );
   }
 
@@ -107,8 +107,8 @@ class _P32_S15State extends State<P32_S15> {
           
           //...............
           AudioButtonWidget(
-            buttonState: _buttonStates[1],
-            audio: _audios[1],
+            buttonState: _buttonStates[0],
+            audio: _audios[0],
             top: 0.235,
             left: .53,
             width: .287,
@@ -116,8 +116,8 @@ class _P32_S15State extends State<P32_S15> {
           ),
            
           AudioButtonWidget(
-            buttonState: _buttonStates[2],
-            audio: _audios[2],
+            buttonState: _buttonStates[1],
+            audio: _audios[1],
             top: 0.235,
             left: .2,
             width: .287,
@@ -125,8 +125,8 @@ class _P32_S15State extends State<P32_S15> {
           ),
           //...............3 buttons
           AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[2],
+            audio: _audios[2],
             top: 0.057,
             left: .04,
             width: .29,
@@ -141,8 +141,8 @@ class _P32_S15State extends State<P32_S15> {
             width: .29,
             heigt: .075,
           ),AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[4],
+            audio: _audios[4],
             top: 0.057,
             left: .67,
             width: .29,
@@ -150,23 +150,23 @@ class _P32_S15State extends State<P32_S15> {
           ),
           ///last 3 buttons
           AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[5],
+            audio: _audios[5],
             top: 0.145,
             left: .04,
             width: .29,
             heigt: .075,
           ),
            AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[6],
+            audio: _audios[6],
             top: 0.145,
             left: .35,
             width: .29,
             heigt: .075,
           ),AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[7],
+            audio: _audios[7],
             top: 0.145,
             left: .67,
             width: .29,
@@ -176,8 +176,8 @@ class _P32_S15State extends State<P32_S15> {
           ///
           for (int i = 0; i < 12; i++)
             AudioButtonWidget(
-              buttonState: _buttonStates[i],
-              audio: _audios[i],
+              buttonState: _buttonStates[i+8],
+              audio: _audios[i+8],
               top: topBase + (i ~/ 6) * rowSpacing,
               left: adjustedLeft(i % 6),
               width: buttonWidth,
