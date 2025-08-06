@@ -77,6 +77,7 @@ class _P33_S15State extends State<P33_S15> {
     });
   }
   double adjustedLeft(int col) {
+    col = 5 - col; // Reverse the order of columns
     double base = 0.035;
     double spacing = 0.148;
     double gap = 0.04; // extra space between col 2 and 3
@@ -87,6 +88,7 @@ class _P33_S15State extends State<P33_S15> {
     }
   }
   double adjustedLeft1(int col) {
+    col = 5 - col; // Reverse the order of columns
     double base = 0.035; // left padding
     double spacing = 0.155; // space between columns
     return base + col * spacing;

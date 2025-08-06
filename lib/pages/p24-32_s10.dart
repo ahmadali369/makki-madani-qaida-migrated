@@ -78,6 +78,7 @@ class _P24_S10State extends State<P24_S10> {
   }
 
   double adjustedLeft(int col) {
+    col = 6 - col; // Reverse the order of columns
     double base = 0.034; // left padding
     double spacing = 0.157; // space between columns
     return base + col * spacing;

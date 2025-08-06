@@ -78,6 +78,7 @@ class _P21_S9State extends State<P21_S9> {
   }
 
   double adjustedLeft(int col) {
+    col = 3 - col; // Reverse the order of columns
     double base = 0.04; // left padding
     double spacing = 0.309; // space between columns
     return base + col * spacing;

@@ -79,6 +79,7 @@ class _P30_S14State extends State<P30_S14> {
   }
 
   double adjustedLeft(int col) {
+    col = 4 - col; // Reverse the order of columns
     double base = 0.034; // left padding
     double spacing = 0.24; // space between columns
     return base + col * spacing;

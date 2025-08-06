@@ -77,6 +77,7 @@ class _P32_S15State extends State<P32_S15> {
     });
   }
   double adjustedLeft(int col) {
+    col = 5 - col; // Reverse the order of columns
     double base = 0.035;
     double spacing = 0.148;
     double gap = 0.04; // extra space between col 2 and 3

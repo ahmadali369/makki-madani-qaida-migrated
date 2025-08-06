@@ -78,6 +78,7 @@ class _P28_S11State extends State<P28_S11> {
   }
 
   double adjustedLeft(int col) {
+    col = 5 - col; // Reverse the order of columns
     double base = 0.034; // left padding
     double spacing = 0.189; // space between columns
     return base + col * spacing;
@@ -89,6 +90,7 @@ class _P28_S11State extends State<P28_S11> {
     return base + row * spacing;
   }
    double adjustedLeft1(int col) {
+    col = 2 - col; // Reverse the order of columns
     double base = 0.1; // left padding
     double spacing = 0.44; // space between columns
     return base + col * spacing;
