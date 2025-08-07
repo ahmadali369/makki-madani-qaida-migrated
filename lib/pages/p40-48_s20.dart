@@ -20,10 +20,10 @@ class _P40_S20State extends State<P40_S20> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(45, false);
+    _buttonStates = List<bool>.filled(12, false);
     _audios = List.generate(
-      45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      12,
+      (index) => 'audios/p48/${index + 1}.mp3',
     );
   }
 
@@ -96,8 +96,8 @@ class _P40_S20State extends State<P40_S20> {
          
              //first row
              AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[1],
+            audio: _audios[1],
             top: 0.14,
             left: .0368,
             width: .48,
@@ -105,8 +105,8 @@ class _P40_S20State extends State<P40_S20> {
           ),
 
            AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[0],
+            audio: _audios[0],
             top: 0.14,
             left: .53,
             width: .44,
@@ -115,16 +115,16 @@ class _P40_S20State extends State<P40_S20> {
           
          //second row
           AudioButtonWidget(
-            buttonState: _buttonStates[4],
-            audio: _audios[4],
+            buttonState: _buttonStates[3],
+            audio: _audios[3],
             top: 0.23,
             left: .0368,
             width: .48,
             heigt: .084,
           ),
           AudioButtonWidget(
-            buttonState: _buttonStates[4],
-            audio: _audios[4],
+            buttonState: _buttonStates[2],
+            audio: _audios[2],
             top: 0.23,
            left: .53,
             width: .44,
@@ -141,8 +141,8 @@ class _P40_S20State extends State<P40_S20> {
             heigt: .084,
           ),  
           AudioButtonWidget(
-            buttonState: _buttonStates[5],
-            audio: _audios[5],
+            buttonState: _buttonStates[4],
+            audio: _audios[4],
             top: 0.327,
            left: .53,
             width: .48,
@@ -151,8 +151,8 @@ class _P40_S20State extends State<P40_S20> {
 
           //fourth row
           AudioButtonWidget(  
-            buttonState: _buttonStates[6],
-            audio: _audios[6],
+            buttonState: _buttonStates[7],
+            audio: _audios[7],
             top: 0.42,
             left: .0368,
             width: .48,
@@ -168,32 +168,32 @@ class _P40_S20State extends State<P40_S20> {
           ),
         
           AudioButtonWidget(  
-            buttonState: _buttonStates[6],
-            audio: _audios[6],
+            buttonState: _buttonStates[9],
+            audio: _audios[9],
             top: 0.63,
             left: .1,
             width: .29,
             heigt: .084,
           ),      
           AudioButtonWidget(
-            buttonState: _buttonStates[6],
-            audio: _audios[6],
+            buttonState: _buttonStates[8],
+            audio: _audios[8],
             top: 0.63,
            left: .56,
             width: .29,
             heigt: .084,
           ),
            AudioButtonWidget(  
-            buttonState: _buttonStates[6],
-            audio: _audios[6],
+            buttonState: _buttonStates[11],
+            audio: _audios[11],
             top: 0.755,
             left: .1,
             width: .29,
             heigt: .084,
           ),      
           AudioButtonWidget(
-            buttonState: _buttonStates[6],
-            audio: _audios[6],
+            buttonState: _buttonStates[10],
+            audio: _audios[10],
             top: 0.755,
            left: .56,
             width: .29,
