@@ -23,7 +23,7 @@ class _P42_S21State extends State<P42_S21> {
     _buttonStates = List<bool>.filled(45, false);
     _audios = List.generate(
       45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      (index) => 'audios/p50/${index + 1}.mp3',
     );
   }
 
