@@ -20,10 +20,10 @@ class _P41_S21State extends State<P41_S21> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(42, false);
+    _buttonStates = List<bool>.filled(30, false);
     _audios = List.generate(
-      42,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      30,
+      (index) => 'audios/p49/${index + 1}.mp3',
     );
   }
 
@@ -78,6 +78,7 @@ class _P41_S21State extends State<P41_S21> {
   }
 
   double adjustedLeft(int col) {
+    col=5-col;
     double base = 0.035; // left padding
     double spacing = 0.155; // space between columns
     return base + col * spacing;
