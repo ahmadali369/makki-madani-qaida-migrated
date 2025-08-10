@@ -78,7 +78,7 @@ class _P28_S11State extends State<P28_S11> {
   }
 
   double adjustedLeft(int col) {
-    col = 5 - col; // Reverse the order of columns
+    col = 4 - col; // Reverse the order of columns
     double base = 0.034; // left padding
     double spacing = 0.189; // space between columns
     return base + col * spacing;
@@ -90,7 +90,7 @@ class _P28_S11State extends State<P28_S11> {
     return base + row * spacing;
   }
    double adjustedLeft1(int col) {
-    col = 2 - col; // Reverse the order of columns
+    col = 1 - col; // Reverse the order of columns
     double base = 0.1; // left padding
     double spacing = 0.44; // space between columns
     return base + col * spacing;
@@ -118,20 +118,20 @@ class _P28_S11State extends State<P28_S11> {
           ),
 
           // Render 35 buttons in 7 rows, 5 columns
-          for (int i = 0; i < 35; i++)
+          for (int i = 4; i < 39; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
               audio: _audios[i],
-              top: adjustedTop(i ~/ 5)+ 0.001,
-              left: adjustedLeft(i % 5),
+              top: adjustedTop((i-4) ~/ 5)+ 0.001,
+              left: adjustedLeft((i-4) % 5),
               width: buttonWidth,
               heigt: buttonHeight,
             ),
-             for (int i = 35; i < 39; i++)
+             for (int i = 0; i < 4; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
               audio: _audios[i],
-              top: adjustedTop1((i-35) ~/ 2)+ 0.001,
+              top: adjustedTop1(i ~/ 2)+ 0.001,
               left: adjustedLeft1(i % 2),
               width: buttonWidth*1.8,
               heigt: buttonHeight,

@@ -111,7 +111,7 @@ class _P26_S11State extends State<P26_S11> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 5)+ 0.001,
-              left: adjustedLeft(i % 5),
+              left: adjustedLeft(i % 5)-0.18,
               width: buttonWidth,
               heigt: buttonHeight,
             ),

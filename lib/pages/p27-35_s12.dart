@@ -78,7 +78,7 @@ class _P27_S11State extends State<P27_S11> {
   }
 
   double adjustedLeft(int col) {
-    col = 6 - col; // Reverse the order of columns
+    col = 5 - col; // Reverse the order of columns
     double base = 0.035; // left padding
     double spacing = 0.155; // space between columns
     return base + col * spacing;
@@ -120,7 +120,7 @@ class _P27_S11State extends State<P27_S11> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 6),
-              left: adjustedLeft(i % 6)+0.47,
+              left: adjustedLeft(i % 6)-0.01,
               width: buttonWidth,
               heigt: buttonHeight,
             ),
