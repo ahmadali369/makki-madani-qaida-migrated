@@ -79,7 +79,7 @@ class _P30_S14State extends State<P30_S14> {
   }
 
   double adjustedLeft(int col) {
-    col = 4 - col; // Reverse the order of columns
+    col = 3 - col; // Reverse the order of columns
     double base = 0.034; // left padding
     double spacing = 0.24; // space between columns
     return base + col * spacing;
@@ -106,20 +106,20 @@ class _P30_S14State extends State<P30_S14> {
             ),
           ),
 
-          for (int i = 0; i < 20; i++)
+          for (int i = 8; i < 28; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
               audio: _audios[i],
-              top: adjustedTop(i ~/ 4)+ 0.001,
-              left: adjustedLeft(i % 4),
+              top: adjustedTop((i-8) ~/ 4)+ 0.001,
+              left: adjustedLeft((i-8) % 4),
               width: buttonWidth*1.3,
               heigt: buttonHeight,
             ),
-          for (int i = 20; i < 28; i++)
+          for (int i = 0; i < 8; i++)
             AudioButtonWidget(  
               buttonState: _buttonStates[i],
               audio: _audios[i],
-              top: 0.05+((i-20)~/4)*0.089,
+              top: 0.05+(i~/4)*0.089,
               left: adjustedLeft(i % 4),
               width: buttonWidth*1.3,
               heigt: buttonHeight,
