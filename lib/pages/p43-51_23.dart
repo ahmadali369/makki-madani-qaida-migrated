@@ -120,8 +120,8 @@ class _P43_S23State extends State<P43_S23> {
             buttonState: _buttonStates[15],
             audio: _audios[15],
             top: 0.86,
-            left: .064,
-            width: .25,
+            left: .13,
+            width: .2,
             heigt: .076,
           ),  
           AudioButtonWidget(
