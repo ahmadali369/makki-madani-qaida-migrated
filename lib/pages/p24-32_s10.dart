@@ -119,7 +119,7 @@ class _P24_S10State extends State<P24_S10> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 6),
-              left: adjustedLeft(i % 6)+0.31,
+              left: adjustedLeft(i % 6)-0.31,
               width: buttonWidth,
               heigt: buttonHeight,
             ),
