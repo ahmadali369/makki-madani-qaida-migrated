@@ -125,20 +125,30 @@ flutter:
     - assets/audios/p48/
     - assets/audios/p49/
     - assets/audios/p50/
-    # - assets/audios/p51/
-    # - assets/audios/p52/
-    # - assets/audios/p53/
-    # - assets/audios/p54/
-    # - assets/audios/p55/
-    # - assets/audios/p56/
-    # - assets/audios/p57/
-    # - assets/audios/p58/
-    # - assets/audios/p59/
-    # - assets/audios/p60/
-
-
-
-
+    - assets/audios/p51/
+    - assets/audios/p52/
+    - assets/audios/p53/
+    - assets/audios/p54/
+    - assets/audios/p55/
+    - assets/audios/p56/
+    - assets/audios/p57/
+    - assets/audios/p58/
+    - assets/audios/p59/
+    - assets/audios/p60/
+    - assets/audios/p61/
+    - assets/audios/p62/
+    - assets/audios/p63/
+    - assets/audios/p64/
+    - assets/audios/p65/
+    # - assets/audios/p66/
+    # - assets/audios/p67/
+    # - assets/audios/p68/
+    # - assets/audios/p69/
+    # - assets/audios/p70/
+    # - assets/audios/p71/
+    # - assets/audios/p72/
+    
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

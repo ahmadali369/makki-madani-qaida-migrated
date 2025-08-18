@@ -20,10 +20,10 @@ class _P43_S23State extends State<P43_S23> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(45, false);
+    _buttonStates = List<bool>.filled(16, false);
     _audios = List.generate(
-      45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      16,
+      (index) => 'audios/p51/${index + 1}.mp3',
     );
   }
 
@@ -77,6 +77,7 @@ class _P43_S23State extends State<P43_S23> {
     });
   }
    double adjustedLeft(int col) {
+    col=5-col;
     double base = 0.035; // left padding
     double spacing = 0.155; // space between columns
     return base + col * spacing;
@@ -116,42 +117,37 @@ class _P43_S23State extends State<P43_S23> {
               heigt: buttonHeight*0.97,
             ),
           AudioButtonWidget(
-            buttonState: _buttonStates[5],
-            audio: _audios[5],
+            buttonState: _buttonStates[15],
+            audio: _audios[15],
             top: 0.86,
             left: .064,
             width: .25,
             heigt: .076,
           ),  
           AudioButtonWidget(
-            buttonState: _buttonStates[5],
-            audio: _audios[5],
+            buttonState: _buttonStates[14],
+            audio: _audios[14],
             top: 0.86,
             left: .335,
             width: .159,
             heigt: .076,
           ),
             AudioButtonWidget(
-            buttonState: _buttonStates[5],
-            audio: _audios[5],
+            buttonState: _buttonStates[13],
+            audio: _audios[13],
             top: 0.86,
             left: .5,
             width: .159,
             heigt: .076,
           ),
           AudioButtonWidget(
-            buttonState: _buttonStates[5],
-            audio: _audios[5],
+            buttonState: _buttonStates[12],
+            audio: _audios[12],
             top: 0.86,
             left: .68,
             width: .159,
             heigt: .076,
           ),
-         
-          
-            
-           
-        
            
         ],
       ),

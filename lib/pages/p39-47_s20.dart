@@ -93,9 +93,6 @@ class _P39_S20State extends State<P39_S20> {
   Widget build(BuildContext context) {
     double buttonWidth = 0.168;
     double buttonHeight = 0.07;
-
-
-
     return Scaffold(
       body: Stack(
         children: [
