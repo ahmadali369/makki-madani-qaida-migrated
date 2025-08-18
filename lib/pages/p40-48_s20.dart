@@ -145,7 +145,7 @@ class _P40_S20State extends State<P40_S20> {
             audio: _audios[4],
             top: 0.327,
            left: .53,
-            width: .48,
+            width: .44,
             heigt: .084,
           ),
 
@@ -163,7 +163,7 @@ class _P40_S20State extends State<P40_S20> {
             audio: _audios[6],
             top: 0.42,
            left: .53,
-            width: .48,
+            width: .44,
             heigt: .084,
           ),
         
