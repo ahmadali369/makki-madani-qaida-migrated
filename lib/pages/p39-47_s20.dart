@@ -77,18 +77,6 @@ class _P39_S20State extends State<P39_S20> {
     });
   }
 
-  double adjustedLeft(int col) {
-    //col = 5 - col; // Reverse the order of columns
-    double base = 0.09; // left padding
-    double spacing = 0.159; // space between columns
-    return base + col * spacing;
-  }
-
-  double adjustedTop(int row) {
-    double base = 0.45; // top padding adjusted to fit the grid
-    double spacing = 0.085; // space between rows
-    return base + row * spacing;
-  }
   @override
   Widget build(BuildContext context) {
     double buttonWidth = 0.168;
