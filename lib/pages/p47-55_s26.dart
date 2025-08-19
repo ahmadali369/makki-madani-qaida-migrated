@@ -20,10 +20,10 @@ class _P47_S26State extends State<P47_S26> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(45, false);
+    _buttonStates = List<bool>.filled(15, false);
     _audios = List.generate(
-      45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      15,
+      (index) => 'audios/p55/${index + 1}.mp3',
     );
   }
 
@@ -78,6 +78,7 @@ class _P47_S26State extends State<P47_S26> {
   }
 
   double adjustedLeft(int col) {
+    col = 2 - col; // Adjusting column index for left alignment
     double base = 0.04; // left padding
     double spacing = 0.31; // space between columns
     return base + col * spacing;
@@ -124,72 +125,89 @@ class _P47_S26State extends State<P47_S26> {
             ),
             ////
              AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[7],
+              audio: _audios[7],
               top: 0.32,
               left: 0.03,
               width: 0.18,
               heigt: 0.07,
             ),
              AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[6],
+              audio: _audios[6],
               top: 0.32,
               left: 0.22,
               width: 0.18,
               heigt: 0.07,
             ),
              AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[5],
+              audio: _audios[5],
               top: 0.32,
               left: 0.415,
               width: 0.358,
               heigt: 0.07,
             ),
              AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[4],
+              audio: _audios[4],
               top: 0.32,
               left: 0.776,
               width: 0.18,
               heigt: 0.07,
             ),
              AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[8],
+              audio: _audios[8],
               top: 0.4,
               left: 0.415,
               width: 0.18,
               heigt: 0.07,
             ),
+            AudioButtonWidget(
+              buttonState: _buttonStates[9],
+              audio: _audios[9],
+              top: 0.69,
+              left: 0.76,
+              width: 0.2,
+              heigt: 0.05,
+            ),
              AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[10],
+              audio: _audios[10],
+              top: 0.77,
+              left: 0.82,
+              width: 0.15,
+              heigt: 0.05,
+            ),
+
+             AudioButtonWidget(
+              buttonState: _buttonStates[14],
+              audio: _audios[14],
               top: 0.84,
               left: 0.17,
               width: 0.37,
               heigt: 0.05,
             ),
              AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[13],
+              audio: _audios[13],
               top: 0.84,
               left: 0.55,
               width: 0.37,
               heigt: 0.05,
             ),
             AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[12],
+              audio: _audios[12],
               top: 0.89,
               left: 0.17,
               width: 0.37,
               heigt: 0.05,
             ),
              AudioButtonWidget(
-              buttonState: _buttonStates[3],
-              audio: _audios[3],
+              buttonState: _buttonStates[11],
+              audio: _audios[11],
               top: 0.89,
               left: 0.55,
               width: 0.37,
