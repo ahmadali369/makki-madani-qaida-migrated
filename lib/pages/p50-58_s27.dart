@@ -20,10 +20,10 @@ class _P50_S28State extends State<P50_S28> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(45, false);
+    _buttonStates = List<bool>.filled(22, false);
     _audios = List.generate(
-      45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      22,
+      (index) => 'audios/p58/${index + 1}.mp3',
     );
   }
 
@@ -77,6 +77,7 @@ class _P50_S28State extends State<P50_S28> {
     });
   }
    double adjustedLeft(int col) {
+    col = 5 - col; // Adjusting column index for left alignment
     double base = 0.035; // left padding
     double spacing = 0.155; // space between columns
     return base + col * spacing;
@@ -120,7 +121,7 @@ class _P50_S28State extends State<P50_S28> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: 0.44, 
-              left: 0.03+((i-18) % 4)*0.235,
+              left: 0.03+(3-(i-18) % 4)*0.235,
               width: 0.23,
               heigt: buttonHeight,
             ),
