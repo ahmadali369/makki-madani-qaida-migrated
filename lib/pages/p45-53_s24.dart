@@ -20,10 +20,10 @@ class _P45_S24State extends State<P45_S24> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(45, false);
+    _buttonStates = List<bool>.filled(16, false);
     _audios = List.generate(
-      45,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      16,
+      (index) => 'audios/p53/${index + 1}.mp3',
     );
   }
 
@@ -78,6 +78,7 @@ class _P45_S24State extends State<P45_S24> {
   }
 
   double adjustedLeft(int col) {
+    col = 3 - col;
     double base = 0.03; // left padding
     double spacing = 0.24; // space between columns
     return base + col * spacing;
@@ -109,7 +110,7 @@ class _P45_S24State extends State<P45_S24> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 4)+ 0.001,
-              left: adjustedLeft(i % 4),
+              left: adjustedLeft(i % 4)-0.02,
               width: buttonWidth*1.3,
               heigt: buttonHeight,
             ),
