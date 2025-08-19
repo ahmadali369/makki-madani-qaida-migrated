@@ -77,14 +77,14 @@ class _P44_S23State extends State<P44_S23> {
     });
   }
    double adjustedLeft(int col) {
-    col=5-col;
-    double base = 0.035; // left padding
-    double spacing = 0.155; // space between columns
+    col=4-col;
+    double base = 0.05; // left padding
+    double spacing = 0.185; // space between columns
     return base + col * spacing;
   }
 
   double adjustedTop(int row) {
-    double base = 0.385; // top padding adjusted to fit the grid
+    double base = 0.059; // top padding adjusted to fit the grid
     double spacing = 0.084; // space between rows
     return base + row * spacing;
   }
@@ -107,48 +107,151 @@ class _P44_S23State extends State<P44_S23> {
             ),
           ),
 
-           for (int i = 0; i < 12; i++)
+           for (int i = 0; i < 14; i++)
             AudioButtonWidget(
               buttonState: _buttonStates[i],
               audio: _audios[i],
-              top: adjustedTop(i ~/ 6)+0.3,
-              left: adjustedLeft(i % 6),
+              top: adjustedTop(i ~/ 5),
+              left: adjustedLeft(i % 5),
               width: buttonWidth,
               heigt: buttonHeight*0.97,
             ),
           AudioButtonWidget(
-            buttonState: _buttonStates[15],
-            audio: _audios[15],
-            top: 0.86,
-            left: .13,
-            width: .2,
-            heigt: .076,
-          ),  
-          AudioButtonWidget(
             buttonState: _buttonStates[14],
             audio: _audios[14],
-            top: 0.86,
-            left: .335,
-            width: .159,
-            heigt: .076,
-          ),
+            top: 0.33,
+            left: .815,
+            width: .15,
+            heigt: .072,
+          ),  
+          AudioButtonWidget(
+            buttonState: _buttonStates[15],
+            audio: _audios[15],
+            top: 0.33,
+            left: .656,
+            width: .15,
+            heigt: .072,
+          ), 
             AudioButtonWidget(
-            buttonState: _buttonStates[13],
-            audio: _audios[13],
-            top: 0.86,
+            buttonState: _buttonStates[16],
+            audio: _audios[16],
+            top: 0.33,
             left: .5,
-            width: .159,
-            heigt: .076,
+            width: .15,
+            heigt: .072,
           ),
           AudioButtonWidget(
-            buttonState: _buttonStates[12],
-            audio: _audios[12],
-            top: 0.86,
-            left: .68,
-            width: .159,
-            heigt: .076,
+            buttonState: _buttonStates[17],
+            audio: _audios[17],
+            top: 0.33,
+            left: .345,
+            width: .15,
+            heigt: .072,
+          ), 
+          AudioButtonWidget(
+            buttonState: _buttonStates[18],
+            audio: _audios[18],
+            top: 0.33,
+            left: .19,
+            width: .15,
+            heigt: .072,
           ),
-           
+          AudioButtonWidget(
+            buttonState: _buttonStates[19],
+            audio: _audios[19],
+            top: 0.33,
+            left: .035,
+            width: .15,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[20],
+            audio: _audios[20],
+            top: 0.413,
+            left: .815,
+            width: .15,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[21],
+            audio: _audios[21],
+            top: 0.413,
+            left: .656,
+            width: .15,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[22],
+            audio: _audios[22],
+            top: 0.413,
+            left: .5,
+            width: .15,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[23],
+            audio: _audios[23],
+            top: 0.413,
+            left: .345,
+            width: .15,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[24],
+            audio: _audios[24],
+            top: 0.413,
+            left: .19,
+            width: .15,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[25],
+            audio: _audios[25],
+            top: 0.413,
+            left: .035,
+            width: .15,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[26],
+            audio: _audios[26],
+            top: 0.496,
+            left: .815,
+            width: .15,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[27],
+            audio: _audios[27],
+            top: 0.496,
+            left: .56,
+            width: .25,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[28],
+            audio: _audios[28],
+            top: 0.496,
+            left: .3,
+            width: .25,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[29],
+            audio: _audios[29],
+            top: 0.496,
+            left: .045,
+            width: .25,
+            heigt: .072,
+          ),
+          AudioButtonWidget(
+            buttonState: _buttonStates[30],
+            audio: _audios[30],
+            top: 0.579,
+            left: .415,
+            width: .25,
+            heigt: .072,
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
