@@ -50,6 +50,28 @@ import '../pages/p47-55_s26.dart';
 import '../pages/p48-56_s26.dart';
 import '../pages/p49-57_s27.dart';
 import '../pages/p50-58_s27.dart';
+import '../pages/p51-59_s28.dart';
+import '../pages/p52-60_s28.dart';
+import '../pages/p53-61_s28.dart';
+import '../pages/p54-62_s28.dart';
+import '../pages/p55-63_s28.dart';
+import '../pages/p56-64_s28.dart';
+import '../pages/p57-65_s28.dart';
+import '../pages/p58-66_s28.dart';
+import '../pages/p59-67_s28.dart';
+import '../pages/p60-68_s28.dart';
+import '../pages/p61-69_s28.dart';
+import '../pages/p62-70_s28.dart';
+import '../pages/p63-71_s28.dart';
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,10 +241,33 @@ class _TasbeehScreenState extends State<TasbeehScreen> {
                       SizedBox(height: 10),
                       PageButton(name: "P50_S28", page: P50_S28()),
                       SizedBox(height: 10),
-
-
-
-
+                      PageButton(name: "P51_S28", page: P51_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P52_S28", page: P52_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P53_S28", page: P53_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P54_S28", page: P54_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P55_S28", page: P55_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P56_S28", page: P56_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P57_S28", page: P57_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P58_S28", page: P58_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P59_S28", page: P59_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P60_S28", page: P60_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P61_S28", page: P61_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P62_S28", page: P62_S28()),
+                      SizedBox(height: 10),
+                      PageButton(name: "P63_S28", page: P63_S28()),
+                      SizedBox(height: 10),
+                     
                     ],
                   ),
                 ),
