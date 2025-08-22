@@ -78,7 +78,7 @@ class _P34_S16State extends State<P34_S16> {
   }
 
   double adjustedLeft(int col) {
-    col = 5 - col; // Adjusting column index for left alignment
+    col = 4 - col; // Adjusting column index for left alignment
     double base = 0.034; // left padding
     double spacing = 0.189; // space between columns
     return base + col * spacing;

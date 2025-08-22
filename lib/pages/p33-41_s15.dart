@@ -20,9 +20,9 @@ class _P33_S15State extends State<P33_S15> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(45, false);
+    _buttonStates = List<bool>.filled(36, false);
     _audios = List.generate(
-      45,
+      36,
       (index) => 'audios/p41/${index + 1}.mp3',
     );
   }
@@ -139,48 +139,48 @@ class _P33_S15State extends State<P33_S15> {
               heigt: 0.089,
             ),
             AudioButtonWidget(
-              buttonState: _buttonStates[30],
-              audio: _audios[30],
+              buttonState: _buttonStates[35],
+              audio: _audios[35],
               top: adjustedTop(12 ~/ 6)+ 0.001,
               left: 0.045,
               width: 0.186,
               heigt: 0.094,
             ),
              AudioButtonWidget(
-              buttonState: _buttonStates[31],
-              audio: _audios[31],
+              buttonState: _buttonStates[34],
+              audio: _audios[34],
               top: adjustedTop(13 ~/ 6)+ 0.001,
               left: 0.245,
               width: 0.14,
               heigt: 0.094,
             ),
             AudioButtonWidget(
-              buttonState: _buttonStates[32],
-              audio: _audios[32],
+              buttonState: _buttonStates[33],
+              audio: _audios[33],
               top: adjustedTop(14 ~/ 6)+ 0.001,
               left: 0.3894,
               width: 0.14,
               heigt: 0.094,
             ),
             AudioButtonWidget(
-              buttonState: _buttonStates[33],
-              audio: _audios[33],
+              buttonState: _buttonStates[32],
+              audio: _audios[32],
               top: adjustedTop(15 ~/ 6)+ 0.001,
               left: 0.535,
               width: 0.14,
               heigt: 0.094,
             ),
             AudioButtonWidget(
-              buttonState: _buttonStates[34],
-              audio: _audios[34],
+              buttonState: _buttonStates[31],
+              audio: _audios[31],
               top: adjustedTop(16 ~/ 6)+ 0.001,
               left: 0.68,
               width: 0.14,
               heigt: 0.094,
             ),
             AudioButtonWidget(
-              buttonState: _buttonStates[35],
-              audio: _audios[35],
+              buttonState: _buttonStates[30],
+              audio: _audios[30],
               top: adjustedTop(17 ~/ 6)+ 0.001,
               left: 0.824,
               width: 0.14,

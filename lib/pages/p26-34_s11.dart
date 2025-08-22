@@ -23,8 +23,14 @@ class _P26_S11State extends State<P26_S11> {
     _buttonStates = List<bool>.filled(45, false);
     _audios = List.generate(
       45,
-      (index) => 'audios/p34/${index + 1}.mp3',
-    );
+      (index) {
+        if (index < 18) {
+          return 'audios/p34/${index + 1}.mp3'; // 1 → 18
+        } else {
+          return 'audios/p34/${index + 2}.mp3'; // skip 19
+        }
+      },
+    );  
   }
 
   @override
@@ -78,7 +84,7 @@ class _P26_S11State extends State<P26_S11> {
   }
 
   double adjustedLeft(int col) {
-    col = 5 - col; // Reverse the order of columns
+    col = 4 - col; // Reverse the order of columns
     double base = 0.034; // left padding
     double spacing = 0.189; // space between columns
     return base + col * spacing;
@@ -111,7 +117,7 @@ class _P26_S11State extends State<P26_S11> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 5)+ 0.001,
-              left: adjustedLeft(i % 5)-0.18,
+              left: adjustedLeft(i % 5),
               width: buttonWidth,
               heigt: buttonHeight,
             ),

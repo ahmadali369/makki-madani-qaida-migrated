@@ -116,8 +116,8 @@ class _P46_S25State extends State<P46_S25> {
 
           for (int i = 0; i < 15; i++)
             AudioButtonWidget(
-              buttonState: _buttonStates[i],
-              audio: _audios[i],
+              buttonState: _buttonStates[i+5],
+              audio: _audios[i+5],
               top: adjustedTop(i ~/ 3)+ 0.001,
               left: adjustedLeft(i % 3),
               width: buttonWidth*1.3,

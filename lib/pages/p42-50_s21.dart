@@ -77,6 +77,7 @@ class _P42_S21State extends State<P42_S21> {
     });
   }
    double adjustedLeft(int col) {
+    col=5-col;
     double base = 0.035; // left padding
     double spacing = 0.155; // space between columns
     return base + col * spacing;
@@ -111,7 +112,7 @@ class _P42_S21State extends State<P42_S21> {
               buttonState: _buttonStates[i],
               audio: _audios[i],
               top: adjustedTop(i ~/ 5)- 0.185,
-              left: (0.024+(i % 5)*0.19)+0.014,
+              left: (0.024+(4-(i % 5))*0.19)+0.014,
               width: buttonWidth*1.2,
               heigt: buttonHeight*0.869,
             ),
@@ -120,8 +121,8 @@ class _P42_S21State extends State<P42_S21> {
            
           //3 buttons
           AudioButtonWidget(
-            buttonState: _buttonStates[0],
-            audio: _audios[0],
+            buttonState: _buttonStates[5],
+            audio: _audios[5],
             top: 0.13,
             left: 0.66,
             width: 0.307,
@@ -129,8 +130,8 @@ class _P42_S21State extends State<P42_S21> {
           ),
            //first row
              AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[8],
+            audio: _audios[8],
             top: 0.24,
             left: .0368,
             width: .307,
@@ -138,8 +139,8 @@ class _P42_S21State extends State<P42_S21> {
           ),
 
            AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[7],
+            audio: _audios[7],
             top: 0.24,
             left: .35,
             width: .307,
@@ -147,8 +148,8 @@ class _P42_S21State extends State<P42_S21> {
           ),
           //rightmost
           AudioButtonWidget(
-            buttonState: _buttonStates[3],
-            audio: _audios[3],
+            buttonState: _buttonStates[6],
+            audio: _audios[6],
             top: 0.24,
             left: .66,
             width: .307,
@@ -156,24 +157,24 @@ class _P42_S21State extends State<P42_S21> {
           ),
          //second row
           AudioButtonWidget(
-            buttonState: _buttonStates[4],
-            audio: _audios[4],
+            buttonState: _buttonStates[11],
+            audio: _audios[11],
             top: 0.437,
             left: .0368,
             width: .307,
             heigt: .08,
           ),
           AudioButtonWidget(
-            buttonState: _buttonStates[4],
-            audio: _audios[4],
+            buttonState: _buttonStates[10],
+            audio: _audios[10],
             top: 0.437,
             left: .35,
             width: .307,
             heigt: .08,
           ),
           AudioButtonWidget(
-            buttonState: _buttonStates[4],
-            audio: _audios[4],
+            buttonState: _buttonStates[9],
+            audio: _audios[9],
             top: 0.437,
             left: .66,
             width: .307,
@@ -181,24 +182,24 @@ class _P42_S21State extends State<P42_S21> {
           ),
           //third row
           AudioButtonWidget(
-            buttonState: _buttonStates[5],
-            audio: _audios[5],
+            buttonState: _buttonStates[14],
+            audio: _audios[14],
             top: 0.526,
             left: .0368,
             width: .307,
             heigt: .08,
           ),  
           AudioButtonWidget(
-            buttonState: _buttonStates[5],
-            audio: _audios[5],
+            buttonState: _buttonStates[13],
+            audio: _audios[13],
             top: 0.526,
             left: .35,
             width: .307,
             heigt: .08,
           ),
           AudioButtonWidget(
-            buttonState: _buttonStates[5],
-            audio: _audios[5],
+            buttonState: _buttonStates[12],
+            audio: _audios[12],
             top: 0.526,
             left: .66,
             width: .307,
@@ -206,8 +207,8 @@ class _P42_S21State extends State<P42_S21> {
           ),
            for (int i = 18; i < 30; i++)
             AudioButtonWidget(
-              buttonState: _buttonStates[i],
-              audio: _audios[i],
+              buttonState: _buttonStates[i-3],
+              audio: _audios[i-3],
               top: adjustedTop(i ~/ 6)+0.3,
               left: adjustedLeft(i % 6),
               width: buttonWidth,
