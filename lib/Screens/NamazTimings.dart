@@ -13,6 +13,7 @@ class PrayerTimingsScreen extends StatefulWidget {
 class _PrayerTimingsScreenState extends State<PrayerTimingsScreen> {
   Map<String, String> prayerTimes = {};
   String nextPrayer = 'Loading...';
+  String errorMessage = '';
 
   @override
   void initState() {
@@ -26,19 +27,25 @@ class _PrayerTimingsScreenState extends State<PrayerTimingsScreen> {
       LocationPermission permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied ||
           permission == LocationPermission.deniedForever) {
-        throw Exception("Location permission denied");
+        setState(() {
+          errorMessage = "Location permission denied";
+        });
+        return;
       }
 
       // Get current location
       Position position = await Geolocator.getCurrentPosition(
-          desiredAccuracy: LocationAccuracy.high);
+          desiredAccuracy: LocationAccuracy.low);
 
       double lat = position.latitude;
       double lon = position.longitude;
 
+      // Current timestamp (for today's timings)
+      final timestamp = DateTime.now().millisecondsSinceEpoch ~/ 1000;
+
       // Call AlAdhan API
       final response = await http.get(Uri.parse(
-        'https://api.aladhan.com/v1/timings?latitude=$lat&longitude=$lon&method=2',
+        'https://api.aladhan.com/v1/timings/$timestamp?latitude=$lat&longitude=$lon&method=2',
       ));
 
       if (response.statusCode == 200) {
@@ -56,27 +63,48 @@ class _PrayerTimingsScreenState extends State<PrayerTimingsScreen> {
           nextPrayer = getNextPrayer();
         });
       } else {
-        throw Exception('Failed to load prayer times');
+        setState(() {
+          errorMessage = 'Failed to load prayer times';
+        });
       }
     } catch (e) {
-      print("Error: $e");
+      setState(() {
+        errorMessage = "Error: $e";
+      });
     }
   }
 
   String getNextPrayer() {
+    if (prayerTimes.isEmpty) return "Loading...";
+
     DateTime now = DateTime.now();
-    DateFormat format = DateFormat('HH:mm');
     for (var entry in prayerTimes.entries) {
       try {
-        DateTime prayerTime = format.parse(entry.value);
-        // Adjust prayer time to today's date
-        prayerTime = DateTime(now.year, now.month, now.day, prayerTime.hour, prayerTime.minute);
+        DateTime prayerTime;
+
+        // Try parsing 24-hour format first
+        try {
+          prayerTime = DateFormat('HH:mm').parse(entry.value);
+        } catch (_) {
+          // If it fails, try 12-hour with AM/PM
+          prayerTime = DateFormat('hh:mm a').parse(entry.value);
+        }
+
+        // Adjust to today's date
+        prayerTime = DateTime(
+          now.year,
+          now.month,
+          now.day,
+          prayerTime.hour,
+          prayerTime.minute,
+        );
+
         if (prayerTime.isAfter(now)) {
           return entry.key;
         }
       } catch (_) {}
     }
-    return 'Fajr'; // fallback
+    return 'Fajr'; // fallback to next day
   }
 
   @override
@@ -127,10 +155,14 @@ class _PrayerTimingsScreenState extends State<PrayerTimingsScreen> {
 
                 // Next Prayer
                 Text(
-                  'Next Prayer: $nextPrayer',
+                  errorMessage.isNotEmpty
+                      ? errorMessage
+                      : 'Next Prayer: $nextPrayer',
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.yellowAccent,
+                    color: errorMessage.isNotEmpty
+                        ? Colors.redAccent
+                        : Colors.yellowAccent,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
