@@ -23,7 +23,7 @@ class _P12_S6State extends State<P12_S6> {
     _buttonStates = List<bool>.filled(39, false);
     _audios = List.generate(
       39,
-      (index) => 'audios/p11/audio_${index + 1}.mp3',
+      (index) => 'audios/p20/${index + 1}.mp3',
     );
   }
 
@@ -78,6 +78,7 @@ class _P12_S6State extends State<P12_S6> {
   }
 
   double adjustedLeft(int col) {
+    col=5-col;
     double base = 0.03; // left padding
     double spacing = 0.159; // space between columns
     return base + col * spacing;
@@ -116,8 +117,8 @@ class _P12_S6State extends State<P12_S6> {
             AudioButtonWidget(
               buttonState: _buttonStates[i],
               audio: _audios[i],
-              top: adjustedTop(i ~/ 6),
-              left: adjustedLeft((i - 36) % 3 * 2),
+              top: adjustedTop(i ~/ 6)-0.008,
+              left: adjustedLeft((i - 36) % 3 * 2)-0.16,
               width: buttonWidth * 2,
               heigt: buttonHeight,
             ),
