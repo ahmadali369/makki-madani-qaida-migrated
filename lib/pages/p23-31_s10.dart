@@ -20,9 +20,9 @@ class _P23_S10State extends State<P23_S10> {
   @override
   void initState() {
     super.initState();
-    _buttonStates = List<bool>.filled(35, false);
+    _buttonStates = List<bool>.filled(36, false);
     _audios = List.generate(
-      35,
+      36,
       (index) => 'audios/p31/${index + 1}.mp3',
     );
   }
@@ -126,8 +126,8 @@ class _P23_S10State extends State<P23_S10> {
             ),
           for (int i = 24; i < 36; i++)
            AudioButtonWidget(
-              buttonState: _buttonStates[i-2],
-              audio: _audios[i-2],
+              buttonState: _buttonStates[i-1],
+              audio: _audios[i-1],
               top: adjustedTop(i ~/ 6)+0.25,
               left: adjustedLeft(i % 6),
               width: buttonWidth,
