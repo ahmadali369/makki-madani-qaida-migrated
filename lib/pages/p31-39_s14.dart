@@ -346,8 +346,8 @@ class _P31_S14State extends State<P31_S14> {
           ),
           //...............3 buttons
           AudioButtonWidget(
-            buttonState: _buttonStates[30],
-            audio: _audios[30],
+            buttonState: _buttonStates[32],
+            audio: _audios[32],
             top: 0.767,
             left: .04,
             width: .29,
@@ -362,8 +362,8 @@ class _P31_S14State extends State<P31_S14> {
             width: .29,
             heigt: .075,
           ),AudioButtonWidget(
-            buttonState: _buttonStates[32],
-            audio: _audios[32],
+            buttonState: _buttonStates[30],
+            audio: _audios[30],
             top: 0.767,
             left: .67,
             width: .29,
@@ -371,8 +371,8 @@ class _P31_S14State extends State<P31_S14> {
           ),
           ///last 3 buttons
           AudioButtonWidget(
-            buttonState: _buttonStates[33],
-            audio: _audios[33],
+            buttonState: _buttonStates[35],
+            audio: _audios[35],
             top: 0.856,
             left: .04,
             width: .29,
@@ -386,8 +386,8 @@ class _P31_S14State extends State<P31_S14> {
             width: .29,
             heigt: .075,
           ),AudioButtonWidget(
-            buttonState: _buttonStates[35],
-            audio: _audios[35],
+            buttonState: _buttonStates[33],
+            audio: _audios[33],
             top: 0.856,
             left: .67,
             width: .29,
