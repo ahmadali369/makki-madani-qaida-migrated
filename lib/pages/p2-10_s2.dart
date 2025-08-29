@@ -67,24 +67,18 @@ class _P1_S1State extends State<P2_S2> {
 
 
 
-    "audios/p1/daad.mp3",
+    "audios/p10m/m1.mp3",
 
-    "audios/p1/tuaa.mp3",
-    "audios/p1/zuaa.mp3",
-    "audios/p1/aain.mp3",
-    "audios/p1/gaain.mp3",
-    "audios/p1/faa.mp3",
-
-    "audios/p1/tuaa.mp3",
-    "audios/p1/zuaa.mp3",
-    "audios/p1/aain.mp3",
-    "audios/p1/gaain.mp3",
-    "audios/p1/faa.mp3",
-
-
-
-
-
+    "audios/p10m/m2.mp3",
+    "audios/p10m/m3.mp3",
+    "audios/p10m/m4.mp3",
+    "audios/p10m/m5.mp3",
+    "audios/p10m/m6.mp3",
+    "audios/p10m/m7.mp3",
+    "audios/p10m/m8.mp3",
+    "audios/p10m/m9.mp3",
+    "audios/p10m/m10.mp3",
+    "audios/p10m/m11.mp3",
 
   ];
 
