@@ -49,7 +49,7 @@ class _QuranAppState extends State<QuranApp> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Text(
-                    'Asalam Alaikum',
+                    'السلام علیکم',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
