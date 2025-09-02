@@ -20,10 +20,10 @@ class QuranApp extends StatefulWidget {
 
 class _QuranAppState extends State<QuranApp> {
   final List<Map<String, dynamic>> containerData = [
-    {"image": "assets/t.png", "label": "Qaida", "screen": TasbeehApp()},
-    {"image": "assets/q.png", "label": "Qibla Tracker ", "screen": const QiblahScreen()},
-    {"image": "assets/qu.png", "label": "Quranic Quotes", "screen": IslamicQuotesApp()}, 
-    {"image": "assets/MMM.png", "label": "Prayer Timings", "screen": PrayerTimingsScreen()},
+    {"image": "assets/t.png", "label": "قاعدہ", "screen": TasbeehApp()},
+    {"image": "assets/q.png", "label": "قبلہ سمت", "screen": const QiblahScreen()},
+    {"image": "assets/qu.png", "label": "قرآنی اقوال", "screen": IslamicQuotesApp()},
+    {"image": "assets/MMM.png", "label": "نماز کے اوقات", "screen": PrayerTimingsScreen()},
   ];
 
   @override
