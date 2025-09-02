@@ -44,7 +44,7 @@ class _QuranAppState extends State<QuranApp> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 120.0),
+              padding: const EdgeInsets.only(bottom: 40.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -78,7 +78,7 @@ class _QuranAppState extends State<QuranApp> {
           ),
         ],
       ),
-      bottomNavigationBar: const CustomNavBarCurved(),
+      // bottomNavigationBar: const CustomNavBarCurved(),
     );
   }
 
