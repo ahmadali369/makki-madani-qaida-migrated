@@ -299,7 +299,7 @@ List<Onboarding> onboardingList = [
     bgImage: AppAssets.man,
     title: "Read with Clarity & Comfort",
     info:
-        'Enjoy a smooth reading experience with clear fonts, translations, and recitations',
+        'Enjoy a smooth reading experience with clear fonts and recitations',
   ),
   Onboarding(
     bgImage: AppAssets.kid,
