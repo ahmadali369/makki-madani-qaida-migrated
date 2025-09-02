@@ -4,7 +4,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 
-import '../Login And Sign Up/Login.dart';
+// import '../Login And Sign Up/Login.dart';
+import '../Quran App/QuranApp.dart';
 import '../Widgets/appassets.dart';
 import '../Widgets/appcolor.dart';
 
@@ -62,10 +63,12 @@ class _OnBoardingState extends State<OnBoarding> {
                 onTap: () {
                   if (_currentIndex == onboardingList.length - 1) {
                     // Navigate to Login only on the last page
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
-                    );
+                    // Navigator.pushReplacement(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => LoginScreen()),
+                    // );
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const QuranApp()));
+
                   } else {
                     // Move to the next page
                     _pageController.nextPage(
